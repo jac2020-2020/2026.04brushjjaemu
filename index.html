@@ -177,6 +177,34 @@
             width: 160px;
             height: 600px;
         }
+
+        /* Custom Scrollbar for Comments */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(251, 146, 60, 0.1);
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(251, 146, 60, 0.4);
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(251, 146, 60, 0.6);
+        }
+
+        /* Empty Star Style */
+        .star-empty {
+            fill: transparent;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+        .star-filled {
+            fill: currentColor;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
     </style>
 </head>
 <body class="bg-game-bg text-orange-900 font-sans leading-relaxed">
@@ -217,13 +245,13 @@
     <aside id="ad-left" class="ad-slot ad-slot--side hidden 2xl:block fixed left-4 top-32 z-20"></aside>
     <aside id="ad-right" class="ad-slot ad-slot--side hidden 2xl:block fixed right-4 top-32 z-20"></aside>
     <!-- Header -->
-    <header class="bg-game-bg text-orange-950 pt-32 pb-24 px-4 relative overflow-hidden border-b border-orange-200">
+    <header class="bg-game-bg text-orange-950 pt-24 pb-8 px-4 relative overflow-hidden border-b border-orange-200">
         <div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6bTIwIDIwYzAtMTEuMDQ2IDguOTU0LTIwIDIwLTIwczIwIDguOTU0IDIwIDIwTDAlMjB6IiBmaWxsPSIjZmI5MjNjIiBmaWxsLW9wYWNpdHk9Ii40IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=')]"></div>
         <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-orange-300/20 blur-[120px] rounded-full pointer-events-none"></div>
         
         <div class="max-w-6xl mx-auto text-center relative z-10 fade-in-up">
-            <h1 class="text-5xl md:text-7xl font-black mb-6 text-orange-950 tracking-tight">Brush Jjaemu Game Online</h1>
-            <h2 class="text-xl md:text-2xl text-orange-800 max-w-3xl mx-auto mb-10 font-bold">Brush Jiaemu Guide & Unblocked Access</h2>
+            <h1 class="text-4xl md:text-5xl font-black mb-3 text-orange-950 tracking-tight">Brush Jjaemu Game Online</h1>
+            <h2 class="text-lg md:text-xl text-orange-800 max-w-3xl mx-auto mb-6 font-bold">Brush Jiaemu Guide & Unblocked Access</h2>
             <div class="inline-flex items-center space-x-3 bg-white/50 border border-orange-200 rounded-full px-6 py-2 shadow-sm backdrop-blur-sm">
                 <span class="relative flex h-2 w-2">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
@@ -235,78 +263,109 @@
     </header>
 
     <!-- Main Content -->
-    <main class="max-w-6xl mx-auto px-4 py-16 relative z-10">
+    <main class="max-w-[90rem] mx-auto px-4 py-8 relative z-10">
         <!-- Game Container -->
-        <section class="mb-20 fade-in-up relative">
-            <div class="rounded-3xl p-6 md:p-8 border-2 border-orange-200 bg-white/80 backdrop-blur-md shadow-2xl relative z-10">
-                <div class="flex items-center justify-between mb-6">
+        <section class="mb-12 fade-in-up relative">
+            <div class="rounded-3xl p-4 md:p-6 border-2 border-orange-200 bg-white/80 backdrop-blur-md shadow-2xl relative z-10">
+                <div class="flex items-center justify-between mb-4 px-2">
                     <h2 class="text-2xl font-black text-orange-950 tracking-wide flex items-center">
                         <svg class="w-6 h-6 mr-2 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         Play Now
                     </h2>
                 </div>
-                <div id="ad-game-top" class="ad-slot ad-slot--banner mb-6"></div>
-                <div class="game-container p-4 mb-4">
-                    <div class="relative w-full group overflow-hidden rounded-2xl" style="padding-bottom: 56.25%;">
-                        <!-- Game Loading Overlay / Start Mask -->
-                        <div id="game-loading" class="absolute inset-0 flex flex-col items-center justify-center bg-orange-50 border-2 border-orange-200 rounded-2xl z-20 transition-opacity duration-500 cursor-pointer hover:bg-orange-100" onclick="startGame()">
-                            <div class="text-center">
-                                <img src="logo.png" alt="Play Brush Jjaemu" class="w-24 h-24 mx-auto mb-4 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-                                <div class="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-black rounded-full shadow-[0_0_15px_rgba(249,115,22,0.4)] transition-all">
-                                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
-                                    Click to Start
+                <div id="ad-game-top" class="ad-slot ad-slot--banner mb-4"></div>
+                <div class="grid lg:grid-cols-4 gap-6 mb-4">
+                    <!-- Game Area -->
+                    <div class="lg:col-span-3 game-container p-2 md:p-4">
+                        <div class="relative w-full group overflow-hidden rounded-2xl" style="padding-bottom: 65%;">
+                            <!-- Game Loading Overlay / Start Mask -->
+                            <div id="game-loading" class="absolute inset-0 flex flex-col items-center justify-center bg-black rounded-2xl z-20 transition-opacity duration-300 cursor-pointer" onclick="startGame()">
+                                <div class="text-center">
+                                    <img src="logo.png" alt="Play Brush Jjaemu" class="w-24 h-24 mx-auto mb-4 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+                                    <div class="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-black rounded-full shadow-[0_0_15px_rgba(249,115,22,0.4)] transition-all">
+                                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                                        Click to Start
+                                    </div>
+                                </div>
+                            </div>
+                            <iframe 
+                                id="game-iframe"
+                                src="https://pub-4ca9553e3b5141e2b08c8798afcf2641.r2.dev/game/brush-jjaemu/index.html"
+                                class="absolute top-0 left-0 w-full h-full game-iframe border-0 opacity-100 bg-black"
+                                allowfullscreen="true"
+                                scrolling="no"
+                                webkitallowfullscreen="true"
+                                mozallowfullscreen="true"
+                                sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+                                allow="autoplay; fullscreen; keyboard-attach"
+                                loading="lazy"
+                                title="Brush Jjaemu Game">
+                            </iframe>
+                            <div class="absolute bottom-4 right-4 z-30 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <a href="#how-to-play" class="bg-white/90 hover:bg-orange-100 border border-orange-300 hover:border-orange-500 text-orange-600 hover:text-orange-700 px-4 py-2 rounded-xl backdrop-blur-md transition-all text-sm font-bold tracking-wider flex items-center shadow-lg">
+                                    <span>💡 Help / Guide</span>
+                                </a>
+                                <button onclick="const f = document.getElementById('game-iframe'); if(f.requestFullscreen) f.requestFullscreen(); else if(f.webkitRequestFullscreen) f.webkitRequestFullscreen();" class="bg-white/90 hover:bg-orange-100 border border-orange-300 hover:border-orange-500 text-orange-600 hover:text-orange-700 px-4 py-2 rounded-xl backdrop-blur-md transition-all text-sm font-bold tracking-wider flex items-center shadow-lg">
+                                    <span>⛶ Full Screen</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Player Notes / Comments Area -->
+                    <div class="lg:col-span-1 bg-orange-50/50 border border-orange-200 rounded-3xl p-6 flex flex-col h-[600px] lg:h-[700px] overflow-hidden shadow-inner">
+                        <h3 class="font-black text-orange-950 text-xl mb-4 tracking-wide flex items-center shrink-0">
+                            <svg class="w-5 h-5 mr-2 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                            Player notes
+                        </h3>
+                        
+                        <div class="bg-white border border-orange-200 rounded-xl p-3 mb-6 flex items-center justify-between shadow-sm shrink-0">
+                            <span class="text-orange-900 font-bold text-sm">Average rating: <span class="text-orange-600" id="average-rating">0.0 / 5</span></span>
+                            <span class="text-orange-500/60 text-xs font-bold" id="total-notes">(0 notes)</span>
+                        </div>
+
+                        <div class="text-xs font-black text-orange-800/50 tracking-widest uppercase mb-4 shrink-0">Published Notes</div>
+                        
+                        <!-- Comments List -->
+                        <div class="flex-1 overflow-y-auto pr-2 space-y-5 custom-scrollbar relative" id="comments-list">
+                            <!-- Loading State -->
+                            <div id="comments-loading" class="absolute inset-0 flex flex-col items-center justify-center bg-orange-50/80 backdrop-blur-sm z-10 rounded-xl">
+                                <div class="loading-spinner mb-3"></div>
+                                <span class="text-orange-600 font-bold text-sm tracking-wider animate-pulse">Loading Notes...</span>
+                            </div>
+                            
+                            <!-- Empty State -->
+                            <div id="comments-empty" class="hidden h-full flex-col items-center justify-center text-center px-4">
+                                <svg class="w-12 h-12 text-orange-300 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                                <p class="text-orange-900 font-bold mb-1">No notes yet</p>
+                                <p class="text-orange-500/70 text-xs">Be the first to share your thoughts on Brush Jjaemu!</p>
+                            </div>
+                        </div>
+
+                        <!-- Add Note Form -->
+                        <div class="mt-4 pt-4 border-t border-orange-200 shrink-0">
+                            <div class="text-xs font-black text-orange-800/50 tracking-widest uppercase mb-3">Add a Note</div>
+                            <div class="space-y-2">
+                                <input type="text" id="note-name" placeholder="Display name" class="w-full bg-white border border-orange-200 rounded-lg px-3 py-2 text-sm text-orange-900 font-medium placeholder-orange-300 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400 transition-all">
+                                <textarea id="note-content" placeholder="What do you think about this game?" rows="2" class="w-full bg-white border border-orange-200 rounded-lg px-3 py-2 text-sm text-orange-900 font-medium placeholder-orange-300 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400 transition-all resize-none"></textarea>
+                                
+                                <div class="flex items-center justify-between mt-2">
+                                    <div class="flex space-x-1 cursor-pointer" id="star-rating">
+                                        <svg class="w-6 h-6 text-orange-300 hover:text-yellow-400 transition-colors star-filled" data-value="1" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                                        <svg class="w-6 h-6 text-orange-300 hover:text-yellow-400 transition-colors star-filled" data-value="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                                        <svg class="w-6 h-6 text-orange-300 hover:text-yellow-400 transition-colors star-filled" data-value="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                                        <svg class="w-6 h-6 text-orange-300 hover:text-yellow-400 transition-colors star-filled" data-value="4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                                        <svg class="w-6 h-6 text-orange-300 hover:text-yellow-400 transition-colors star-filled" data-value="5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                                    </div>
+                                    <button id="post-note-btn" class="w-24 bg-orange-100 hover:bg-orange-500 text-orange-600 hover:text-white border border-orange-200 hover:border-orange-500 font-bold rounded-lg px-4 py-2 text-sm transition-colors shadow-sm">
+                                        Post
+                                    </button>
                                 </div>
                             </div>
                         </div>
-                        <iframe 
-                            id="game-iframe"
-                            src=""
-                            data-src="https://pub-4ca9553e3b5141e2b08c8798afcf2641.r2.dev/game/brush-jjaemu/index.html"
-                            class="absolute top-0 left-0 w-full h-full game-iframe border-0 opacity-0 transition-opacity duration-500 bg-orange-100"
-                            allowfullscreen="true"
-                            scrolling="no"
-                            webkitallowfullscreen="true"
-                            mozallowfullscreen="true"
-                            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-                            allow="autoplay; fullscreen; keyboard-attach"
-                            loading="lazy"
-                            title="Brush Jjaemu Game"
-                            onload="if(this.src !== 'about:blank' && this.src !== window.location.href) { this.style.opacity=1; }">
-                        </iframe>
-                        <div class="absolute bottom-4 right-4 z-30 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <a href="#how-to-play" class="bg-white/90 hover:bg-orange-100 border border-orange-300 hover:border-orange-500 text-orange-600 hover:text-orange-700 px-4 py-2 rounded-xl backdrop-blur-md transition-all text-sm font-bold tracking-wider flex items-center shadow-lg">
-                                <span>💡 Help / Guide</span>
-                            </a>
-                            <button onclick="const f = document.getElementById('game-iframe'); f.src = f.getAttribute('data-src');" class="bg-white/90 hover:bg-orange-100 border border-orange-300 hover:border-orange-500 text-orange-600 hover:text-orange-700 px-4 py-2 rounded-xl backdrop-blur-md transition-all text-sm font-bold tracking-wider flex items-center shadow-lg">
-                                <span>↻ Refresh Game</span>
-                            </button>
-                            <button onclick="const f = document.getElementById('game-iframe'); if(f.requestFullscreen) f.requestFullscreen(); else if(f.webkitRequestFullscreen) f.webkitRequestFullscreen();" class="bg-white/90 hover:bg-orange-100 border border-orange-300 hover:border-orange-500 text-orange-600 hover:text-orange-700 px-4 py-2 rounded-xl backdrop-blur-md transition-all text-sm font-bold tracking-wider flex items-center shadow-lg">
-                                <span>⛶ Full Screen</span>
-                            </button>
-                        </div>
                     </div>
                 </div>
-                <div id="ad-game-bottom" class="ad-slot ad-slot--banner mt-6"></div>
-                <div class="flex items-center justify-center space-x-6 text-sm text-orange-700 font-bold tracking-wide">
-                    <div class="flex items-center space-x-2">
-                        <span class="relative flex h-3 w-3">
-                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                          <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
-                        </span>
-                        <span class="text-green-600">Server Online</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-orange-500 rounded-full shadow-[0_0_5px_rgba(249,115,22,0.8)]"></span>
-                        <span>WebGL 2.0</span>
-                    </div>
-                    <div class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-yellow-500 rounded-full shadow-[0_0_5px_rgba(234,179,8,0.8)]"></span>
-                        <span>Multiplayer</span>
-                    </div>
-                </div>
-                <p class="text-orange-600/80 text-center mt-6 text-sm font-medium">
-                    Connection encrypted. Game loads directly via cloud streaming.
-                </p>
+                <div id="ad-game-bottom" class="ad-slot ad-slot--banner mt-2"></div>
             </div>
         </section>
 
@@ -597,8 +656,15 @@
     }
     </script>
 
+    <!-- Supabase JS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
     <!-- Interactive JavaScript -->
     <script>
+        // Supabase Initialization
+        const supabaseUrl = 'https://infwtpxlgpqmcfownelz.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImluZnd0cHhsZ3BxbWNmb3duZWx6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3MzkxNDgsImV4cCI6MjA5MjMxNTE0OH0.t3DH4_TSugrJ9qjNuwNX0W00UWXDcx09FLDQo866otk';
+        const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
         // Scroll animations
         const observerOptions = {
             threshold: 0.1,
@@ -677,39 +743,237 @@
             const loadingElement = document.getElementById('game-loading');
             const iframe = document.getElementById('game-iframe');
             
-            // Start Loading Animation
-            loadingElement.innerHTML = `
-                <div class="text-center">
-                    <div class="text-orange-500 mb-4 flex justify-center">
-                        <svg class="w-12 h-12 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
-                    </div>
-                    <p class="text-orange-600 font-bold tracking-widest uppercase mb-2 text-sm">Waking up Jjaemu...</p>
-                    <div class="w-48 bg-orange-200 rounded-full h-1 mt-4 mx-auto overflow-hidden">
-                        <div class="bg-orange-500 h-1 rounded-full relative" style="width: 100%; transition: width 1s;">
-                            <div class="absolute inset-0 bg-white/20 animate-pulse"></div>
-                        </div>
-                    </div>
-                </div>
-            `;
-            
             // Prevent multiple clicks
             loadingElement.onclick = null;
             loadingElement.style.cursor = 'default';
             
-            // Set iframe src to trigger load
-            iframe.src = iframe.getAttribute('data-src');
+            // Focus iframe to enable keyboard/mouse controls immediately
+            iframe.focus();
             
-            // Hide mask after a short delay to let game load
+            // Hide mask immediately (fade out)
+            loadingElement.style.opacity = '0';
             setTimeout(() => {
-                loadingElement.style.opacity = '0';
-                setTimeout(() => {
-                    loadingElement.style.display = 'none';
-                }, 500);
-            }, 1500);
+                loadingElement.style.display = 'none';
+            }, 300);
         }
 
         // Remove the automatic call
         // simulateGameLoading();
+
+        // Player Notes Logic (Supabase)
+        document.addEventListener('DOMContentLoaded', () => {
+            const stars = document.querySelectorAll('#star-rating svg');
+            let currentRating = 5; // Default rating
+            
+            // Star hover and click logic
+            stars.forEach(star => {
+                star.addEventListener('mouseenter', (e) => {
+                    const value = parseInt(e.currentTarget.getAttribute('data-value'));
+                    updateStars(value, true);
+                });
+                
+                star.addEventListener('mouseleave', () => {
+                    updateStars(currentRating, false);
+                });
+                
+                star.addEventListener('click', (e) => {
+                    currentRating = parseInt(e.currentTarget.getAttribute('data-value'));
+                    updateStars(currentRating, false);
+                });
+            });
+            
+            function updateStars(value, isHover) {
+                stars.forEach(star => {
+                    const starValue = parseInt(star.getAttribute('data-value'));
+                    if (starValue <= value) {
+                        star.classList.remove('text-orange-300', 'star-empty');
+                        star.classList.add('text-yellow-400', 'star-filled');
+                    } else {
+                        star.classList.remove('text-yellow-400', 'star-filled');
+                        star.classList.add('text-orange-300', 'star-empty');
+                    }
+                });
+            }
+            
+            // Initialize stars
+            updateStars(currentRating, false);
+
+            // Post Note Logic
+            const postBtn = document.getElementById('post-note-btn');
+            const nameInput = document.getElementById('note-name');
+            const contentInput = document.getElementById('note-content');
+            const commentsContainer = document.getElementById('comments-list');
+            const loadingState = document.getElementById('comments-loading');
+            const emptyState = document.getElementById('comments-empty');
+            const averageRatingEl = document.getElementById('average-rating');
+            const totalNotesEl = document.getElementById('total-notes');
+            
+            // Load saved comments from Supabase
+            loadComments();
+
+            postBtn.addEventListener('click', async () => {
+                const name = nameInput.value.trim() || 'Anonymous Fluff';
+                const content = contentInput.value.trim();
+                
+                if (!content) {
+                    alert('Please enter your comment before posting!');
+                    return;
+                }
+
+                // Change button state
+                const originalText = postBtn.textContent;
+                postBtn.textContent = 'Posting...';
+                postBtn.disabled = true;
+                postBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                
+                const { data, error } = await supabaseClient
+                    .from('comments')
+                    .insert([
+                        { name: name, content: content, rating: currentRating }
+                    ])
+                    .select();
+                
+                postBtn.disabled = false;
+                postBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+
+                if (error) {
+                    console.error('Error inserting comment:', error);
+                    alert('Failed to post comment. Please check database permissions (RLS) or try again.');
+                    postBtn.textContent = originalText;
+                    return;
+                }
+                
+                // Add to UI
+                if (data && data.length > 0) {
+                    const insertedComment = data[0];
+                    const dateStr = new Date(insertedComment.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).toUpperCase();
+                    
+                    const newCommentObj = {
+                        name: insertedComment.name,
+                        rating: insertedComment.rating,
+                        content: insertedComment.content,
+                        date: dateStr
+                    };
+                    addCommentToUI(newCommentObj, true, true);
+                }
+                
+                // Reset form
+                nameInput.value = '';
+                contentInput.value = '';
+                currentRating = 5;
+                updateStars(currentRating, false);
+                
+                // Success visual feedback
+                postBtn.textContent = 'Posted!';
+                postBtn.classList.add('bg-green-500', 'text-white');
+                postBtn.classList.remove('bg-orange-100', 'text-orange-600');
+                
+                setTimeout(() => {
+                    postBtn.textContent = originalText;
+                    postBtn.classList.remove('bg-green-500', 'text-white');
+                    postBtn.classList.add('bg-orange-100', 'text-orange-600');
+                }, 2000);
+            });
+            
+            function addCommentToUI(comment, animate = false, prepend = false) {
+                let starsHtml = '';
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= comment.rating) {
+                        starsHtml += '★ ';
+                    } else {
+                        starsHtml += '☆ ';
+                    }
+                }
+                
+                const commentEl = document.createElement('div');
+                commentEl.className = `border-b border-orange-100 pb-4 ${animate ? 'animate-pulse' : ''}`;
+                commentEl.innerHTML = `
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="font-bold text-orange-950 text-sm">${comment.name}</span>
+                        <div class="flex text-yellow-400 text-xs">${starsHtml.trim()}</div>
+                    </div>
+                    <p class="text-orange-800/80 text-sm font-medium mb-1">${comment.content}</p>
+                    <span class="text-orange-500/50 text-[10px] font-bold uppercase tracking-wider">${comment.date}</span>
+                `;
+                
+                if (prepend) {
+                    // insert after the loading/empty states
+                    let insertBeforeElement = commentsContainer.firstElementChild;
+                    while (insertBeforeElement && (insertBeforeElement.id === 'comments-loading' || insertBeforeElement.id === 'comments-empty')) {
+                        insertBeforeElement = insertBeforeElement.nextElementSibling;
+                    }
+                    if (insertBeforeElement) {
+                        commentsContainer.insertBefore(commentEl, insertBeforeElement);
+                    } else {
+                        commentsContainer.appendChild(commentEl);
+                    }
+                } else {
+                    commentsContainer.appendChild(commentEl);
+                }
+                
+                // Hide empty state if visible
+                if (emptyState.style.display !== 'none') {
+                    emptyState.style.display = 'none';
+                }
+            }
+            
+            function updateStats(data) {
+                if (!data || data.length === 0) {
+                    averageRatingEl.textContent = '0.0 / 5';
+                    totalNotesEl.textContent = '(0 notes)';
+                    return;
+                }
+                
+                const total = data.length;
+                const sum = data.reduce((acc, curr) => acc + (curr.rating || 5), 0);
+                const avg = (sum / total).toFixed(1);
+                
+                averageRatingEl.textContent = `${avg} / 5`;
+                totalNotesEl.textContent = `(${total} note${total > 1 ? 's' : ''})`;
+            }
+
+            async function loadComments() {
+                try {
+                    const { data, error } = await supabaseClient
+                        .from('comments')
+                        .select('*')
+                        .order('created_at', { ascending: false })
+                        .limit(50);
+                        
+                    if (error) {
+                        console.error('Error fetching comments:', error);
+                        loadingState.style.display = 'none';
+                        return;
+                    }
+                    
+                    loadingState.style.display = 'none';
+                    
+                    if (data && data.length > 0) {
+                        // We have real data
+                        emptyState.style.display = 'none';
+                        updateStats(data);
+                        
+                        data.forEach(comment => {
+                            const dateStr = new Date(comment.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).toUpperCase();
+                            addCommentToUI({
+                                name: comment.name,
+                                rating: comment.rating,
+                                content: comment.content,
+                                date: dateStr
+                            }, false, false);
+                        });
+                    } else {
+                        // Empty database
+                        emptyState.style.display = 'flex';
+                        updateStats([]);
+                    }
+                } catch (e) {
+                    console.error('Network or Supabase error:', e);
+                    loadingState.style.display = 'none';
+                }
+            }
+        });
+
         // Theme toggle logic
         const themeToggleBtn = document.getElementById('theme-toggle');
         const darkIcon = document.getElementById('theme-toggle-dark-icon');
