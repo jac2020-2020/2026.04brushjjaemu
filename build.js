@@ -41,6 +41,10 @@ langs.forEach(lang => {
         $('meta[name="twitter:description"]').attr('content', dict.footer_seo_desc);
     }
     
+    // Ensure all language pages point to the correct OG image
+    $('meta[property="og:image"]').attr('content', 'https://brushjjaemu.fun/og.png');
+    $('meta[name="twitter:image"]').attr('content', 'https://brushjjaemu.fun/og.png');
+    
     // We didn't add seo_desc to the dictionary, but we can do it if needed. 
     // Wait, we didn't add it in extract-i18n.js. Let's just use the default or if we have it.
     
