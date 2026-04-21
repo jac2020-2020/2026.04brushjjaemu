@@ -21,28 +21,27 @@
     <!-- Modern Gaming Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
+                        sans: ['Nunito', 'sans-serif'],
                     },
                     colors: {
-                        'game-bg': '#0B0F19',
-                        'game-card': 'rgba(17, 24, 39, 0.7)',
-                        'game-border': 'rgba(255, 255, 255, 0.1)',
-                        'neon-cyan': '#06b6d4',
-                        'neon-purple': '#a855f7',
-                        'neon-green': '#10b981',
-                        'neon-orange': '#f59e0b',
+                        'game-bg': '#FFF5E6',
+                        'game-card': 'rgba(255, 255, 255, 0.9)',
+                        'game-border': 'rgba(251, 146, 60, 0.2)',
+                        'cat-orange': '#f97316',
+                        'cat-light': '#fdba74',
+                        'cat-dark': '#c2410c',
+                        'cat-text': '#431407',
                     },
                     boxShadow: {
-                        'neon-cyan': '0 0 15px rgba(6, 182, 212, 0.5)',
-                        'neon-purple': '0 0 15px rgba(168, 85, 247, 0.5)',
-                        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+                        'cat-glow': '0 0 15px rgba(249, 115, 22, 0.3)',
+                        'glass': '0 8px 32px 0 rgba(249, 115, 22, 0.1)',
                     }
                 }
             }
@@ -50,16 +49,16 @@
     </script>
     <style>
         body {
-            background-color: #0B0F19;
+            background-color: #FFF5E6;
             background-image: 
-                radial-gradient(circle at 15% 50%, rgba(168, 85, 247, 0.08), transparent 25%),
-                radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.08), transparent 25%);
+                radial-gradient(circle at 15% 50%, rgba(253, 186, 116, 0.2), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(249, 115, 22, 0.15), transparent 25%);
             background-attachment: fixed;
-            color: #94a3b8;
+            color: #7c2d12;
         }
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+            50% { transform: translateY(-15px); }
         }
         
         @keyframes fadeInUp {
@@ -78,29 +77,17 @@
             50% { transform: scale(1.05); }
         }
         
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
         .game-iframe {
-            border-radius: 12px;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.15);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 4px solid #fed7aa;
         }
         
         .game-iframe:hover {
             transform: scale(1.02);
-            box-shadow: 0 0 40px rgba(6, 182, 212, 0.4);
-            border-color: rgba(6, 182, 212, 0.5);
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(-45deg, #0f172a, #1e1b4b, #0B0F19, #064e3b);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+            box-shadow: 0 15px 40px rgba(249, 115, 22, 0.25);
+            border-color: #f97316;
         }
         
         .float-animation {
@@ -120,33 +107,27 @@
             background: var(--tw-colors-game-card);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--tw-colors-game-border);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            border: 2px solid var(--tw-colors-game-border);
+            box-shadow: 0 8px 32px 0 rgba(249, 115, 22, 0.1);
+            border-radius: 24px;
         }
         
         .card-hover:hover {
             transform: translateY(-10px);
-            box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
-            border-color: rgba(6, 182, 212, 0.3);
-        }
-        
-        .parallax-bg {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            box-shadow: 0 15px 30px rgba(249, 115, 22, 0.15);
+            border-color: rgba(249, 115, 22, 0.3);
         }
         
         .text-gradient {
-            background: linear-gradient(135deg, #06b6d4, #a855f7);
+            background: linear-gradient(135deg, #f97316, #fb923c);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
         
         .loading-spinner {
-            border: 4px solid rgba(255,255,255,0.1);
-            border-top: 4px solid #06b6d4;
+            border: 4px solid rgba(249, 115, 22, 0.2);
+            border-top: 4px solid #f97316;
             border-radius: 50%;
             width: 40px;
             height: 40px;
@@ -160,19 +141,20 @@
         
         .game-container {
             position: relative;
-            background: radial-gradient(circle at center, rgba(6, 182, 212, 0.1) 0%, transparent 70%);
-            border: 1px solid rgba(6, 182, 212, 0.2);
+            background: radial-gradient(circle at center, rgba(253, 186, 116, 0.2) 0%, transparent 70%);
+            border: 2px dashed rgba(251, 146, 60, 0.3);
+            border-radius: 24px;
         }
         
         .feature-icon {
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            background: linear-gradient(135deg, #06b6d4, #3b82f6);
-            box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+            background: linear-gradient(135deg, #f97316, #fbbf24);
+            box-shadow: 0 0 15px rgba(249, 115, 22, 0.3);
         }
         
         .feature-icon:hover {
             transform: rotate(360deg) scale(1.2);
-            box-shadow: 0 0 25px rgba(6, 182, 212, 0.6);
+            box-shadow: 0 0 25px rgba(249, 115, 22, 0.5);
         }
 
         .ad-slot:empty {
@@ -180,9 +162,9 @@
         }
 
         .ad-slot {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            border-radius: 12px;
+            background: rgba(249, 115, 22, 0.05);
+            border: 2px dashed rgba(249, 115, 22, 0.15);
+            border-radius: 16px;
             overflow: hidden;
         }
 
@@ -197,32 +179,32 @@
         }
     </style>
 </head>
-<body class="bg-game-bg text-slate-300 font-sans leading-relaxed">
+<body class="bg-game-bg text-orange-900 font-sans leading-relaxed">
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 bg-[#0B0F19]/80 backdrop-blur-md border-b border-white/5 transition-colors duration-300" id="navbar">
+    <nav class="fixed top-0 w-full z-50 bg-orange-50/90 backdrop-blur-md border-b border-orange-200 transition-colors duration-300" id="navbar">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex items-center justify-between h-16">
                 <!-- Logo and Name -->
                 <div class="flex items-center space-x-3">
-                    <img src="logo.png" alt="Brush Jjaemu Logo" class="h-10 w-10 rounded-lg shadow-[0_0_10px_rgba(6,182,212,0.3)] object-cover">
-                    <span class="text-xl font-bold text-white tracking-wide">Brush Jjaemu</span>
+                    <img src="logo.png" alt="Brush Jjaemu Logo" class="h-10 w-10 rounded-lg shadow-[0_0_10px_rgba(249,115,22,0.3)] object-cover">
+                    <span class="text-xl font-extrabold text-orange-950 tracking-wide">Brush Jjaemu</span>
                 </div>
                 
                 <!-- Navigation Links & Actions -->
                 <div class="flex items-center space-x-4 md:space-x-6">
                     <div class="hidden md:flex items-center space-x-6">
-                        <a href="#how-to-play" class="text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors">How to Play</a>
-                        <a href="#faq" class="text-sm font-medium text-slate-300 hover:text-cyan-400 transition-colors">FAQ</a>
+                        <a href="#how-to-play" class="text-sm font-bold text-orange-800 hover:text-orange-600 transition-colors">How to Play</a>
+                        <a href="#faq" class="text-sm font-bold text-orange-800 hover:text-orange-600 transition-colors">FAQ</a>
                     </div>
                     
-                    <div class="flex items-center space-x-3 md:border-l md:border-white/10 md:pl-6">
+                    <div class="flex items-center space-x-3 md:border-l md:border-orange-200 md:pl-6">
                         <!-- Language Switcher -->
-                        <button class="text-slate-300 hover:text-cyan-400 transition-colors flex items-center justify-center w-8 h-8 rounded-full hover:bg-white/5" title="Switch Language">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+                        <button class="text-orange-800 hover:text-orange-600 transition-colors flex items-center justify-center w-8 h-8 rounded-full hover:bg-orange-200" title="Switch Language">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
                         </button>
                         
                         <!-- Theme Toggle -->
-                        <button id="theme-toggle" class="text-slate-300 hover:text-cyan-400 transition-colors flex items-center justify-center w-8 h-8 rounded-full hover:bg-white/5" title="Toggle Theme">
+                        <button id="theme-toggle" class="text-orange-800 hover:text-orange-600 transition-colors flex items-center justify-center w-8 h-8 rounded-full hover:bg-orange-200" title="Toggle Theme">
                             <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
                             <svg id="theme-toggle-light-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
                         </button>
@@ -235,19 +217,19 @@
     <aside id="ad-left" class="ad-slot ad-slot--side hidden 2xl:block fixed left-4 top-32 z-20"></aside>
     <aside id="ad-right" class="ad-slot ad-slot--side hidden 2xl:block fixed right-4 top-32 z-20"></aside>
     <!-- Header -->
-    <header class="bg-game-bg text-white pt-32 pb-24 px-4 relative overflow-hidden border-b border-white/5">
-        <div class="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6bTIwIDIwYzAtMTEuMDQ2IDguOTU0LTIwIDIwLTIwczIwIDguOTU0IDIwIDIwTDAlMjB6IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9Ii4wNSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+')]"></div>
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+    <header class="bg-game-bg text-orange-950 pt-32 pb-24 px-4 relative overflow-hidden border-b border-orange-200">
+        <div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6bTIwIDIwYzAtMTEuMDQ2IDguOTU0LTIwIDIwLTIwczIwIDguOTU0IDIwIDIwTDAlMjB6IiBmaWxsPSIjZmI5MjNjIiBmaWxsLW9wYWNpdHk9Ii40IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=')]"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-orange-300/20 blur-[120px] rounded-full pointer-events-none"></div>
         
         <div class="max-w-6xl mx-auto text-center relative z-10 fade-in-up">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 text-white tracking-tight">Brush Jjaemu Game</h1>
-            <h2 class="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto mb-10 font-light">Brush Jiaemu Guide & Unblocked Access</h2>
-            <div class="inline-flex items-center space-x-3 bg-white/5 border border-white/10 rounded-full px-6 py-2 shadow-sm">
+            <h1 class="text-5xl md:text-7xl font-black mb-6 text-orange-950 tracking-tight">Brush Jjaemu Game Online</h1>
+            <h2 class="text-xl md:text-2xl text-orange-800 max-w-3xl mx-auto mb-10 font-bold">Brush Jiaemu Guide & Unblocked Access</h2>
+            <div class="inline-flex items-center space-x-3 bg-white/50 border border-orange-200 rounded-full px-6 py-2 shadow-sm backdrop-blur-sm">
                 <span class="relative flex h-2 w-2">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
                 </span>
-                <span class="text-slate-300 text-sm font-medium tracking-wide uppercase">Free to Play • No Download</span>
+                <span class="text-orange-900 text-sm font-bold tracking-wide uppercase">Free to Play • No Download</span>
             </div>
         </div>
     </header>
@@ -256,109 +238,116 @@
     <main class="max-w-6xl mx-auto px-4 py-16 relative z-10">
         <!-- Game Container -->
         <section class="mb-20 fade-in-up relative">
-            <div class="rounded-2xl p-6 md:p-8 border border-white/5 bg-[#0d1321] shadow-2xl relative z-10">
+            <div class="rounded-3xl p-6 md:p-8 border-2 border-orange-200 bg-white/80 backdrop-blur-md shadow-2xl relative z-10">
                 <div class="flex items-center justify-between mb-6">
-                    <h2 class="text-xl font-semibold text-white tracking-wide flex items-center">
-                        <svg class="w-5 h-5 mr-2 text-cyan-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h2 class="text-2xl font-black text-orange-950 tracking-wide flex items-center">
+                        <svg class="w-6 h-6 mr-2 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         Play Now
                     </h2>
                 </div>
                 <div id="ad-game-top" class="ad-slot ad-slot--banner mb-6"></div>
-                <div class="game-container rounded-2xl p-4 mb-4">
-                    <div class="relative w-full group overflow-hidden rounded-xl" style="padding-bottom: 56.25%;">
-                        <div id="game-loading" class="absolute inset-0 flex items-center justify-center bg-slate-900 border border-white/10 rounded-xl">
+                <div class="game-container p-4 mb-4">
+                    <div class="relative w-full group overflow-hidden rounded-2xl" style="padding-bottom: 56.25%;">
+                        <!-- Game Loading Overlay / Start Mask -->
+                        <div id="game-loading" class="absolute inset-0 flex flex-col items-center justify-center bg-orange-50 border-2 border-orange-200 rounded-2xl z-20 transition-opacity duration-500 cursor-pointer hover:bg-orange-100" onclick="startGame()">
                             <div class="text-center">
-                                <div class="loading-spinner mx-auto mb-4"></div>
-                                <p class="text-slate-400 font-medium tracking-widest uppercase text-sm">Brushing the cat... Please wait</p><p class="text-xs text-slate-500 mt-2">(Jjaemu is getting ready!)</p>
+                                <img src="logo.png" alt="Play Brush Jjaemu" class="w-24 h-24 mx-auto mb-4 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+                                <div class="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-black rounded-full shadow-[0_0_15px_rgba(249,115,22,0.4)] transition-all">
+                                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                                    Click to Start
+                                </div>
                             </div>
                         </div>
                         <iframe 
                             id="game-iframe"
-                            src="about:blank"
-                            class="absolute top-0 left-0 w-full h-full game-iframe border-0 opacity-0 transition-opacity duration-500 bg-slate-950"
+                            src=""
+                            data-src="https://pub-4ca9553e3b5141e2b08c8798afcf2641.r2.dev/game/brush-jjaemu/index.html"
+                            class="absolute top-0 left-0 w-full h-full game-iframe border-0 opacity-0 transition-opacity duration-500 bg-orange-100"
                             allowfullscreen="true"
+                            scrolling="no"
                             webkitallowfullscreen="true"
                             mozallowfullscreen="true"
                             sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+                            allow="autoplay; fullscreen; keyboard-attach"
                             loading="lazy"
                             title="Brush Jjaemu Game"
-                            onload="this.style.opacity=1; document.getElementById('game-loading').style.display='none';">
+                            onload="if(this.src !== 'about:blank' && this.src !== window.location.href) { this.style.opacity=1; }">
                         </iframe>
-                        <div class="absolute bottom-4 right-4 z-10 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <a href="#how-to-play" class="bg-black/80 hover:bg-cyan-500/20 border border-cyan-500/50 hover:border-cyan-400 text-cyan-400 px-4 py-2 rounded-lg backdrop-blur-md transition-all text-sm font-bold tracking-wider flex items-center shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+                        <div class="absolute bottom-4 right-4 z-30 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <a href="#how-to-play" class="bg-white/90 hover:bg-orange-100 border border-orange-300 hover:border-orange-500 text-orange-600 hover:text-orange-700 px-4 py-2 rounded-xl backdrop-blur-md transition-all text-sm font-bold tracking-wider flex items-center shadow-lg">
                                 <span>💡 Help / Guide</span>
                             </a>
-                            <button onclick="const f = document.getElementById('game-iframe'); f.src = f.src;" class="bg-black/80 hover:bg-cyan-500/20 border border-cyan-500/50 hover:border-cyan-400 text-cyan-400 px-4 py-2 rounded-lg backdrop-blur-md transition-all text-sm font-bold tracking-wider flex items-center shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+                            <button onclick="const f = document.getElementById('game-iframe'); f.src = f.getAttribute('data-src');" class="bg-white/90 hover:bg-orange-100 border border-orange-300 hover:border-orange-500 text-orange-600 hover:text-orange-700 px-4 py-2 rounded-xl backdrop-blur-md transition-all text-sm font-bold tracking-wider flex items-center shadow-lg">
                                 <span>↻ Refresh Game</span>
                             </button>
-                            <button onclick="const f = document.getElementById('game-iframe'); if(f.requestFullscreen) f.requestFullscreen(); else if(f.webkitRequestFullscreen) f.webkitRequestFullscreen();" class="bg-black/80 hover:bg-cyan-500/20 border border-cyan-500/50 hover:border-cyan-400 text-cyan-400 px-4 py-2 rounded-lg backdrop-blur-md transition-all text-sm font-bold tracking-wider flex items-center shadow-[0_0_15px_rgba(6,182,212,0.3)]">
+                            <button onclick="const f = document.getElementById('game-iframe'); if(f.requestFullscreen) f.requestFullscreen(); else if(f.webkitRequestFullscreen) f.webkitRequestFullscreen();" class="bg-white/90 hover:bg-orange-100 border border-orange-300 hover:border-orange-500 text-orange-600 hover:text-orange-700 px-4 py-2 rounded-xl backdrop-blur-md transition-all text-sm font-bold tracking-wider flex items-center shadow-lg">
                                 <span>⛶ Full Screen</span>
                             </button>
                         </div>
                     </div>
                 </div>
                 <div id="ad-game-bottom" class="ad-slot ad-slot--banner mt-6"></div>
-                <div class="flex items-center justify-center space-x-6 text-sm text-slate-400 font-medium tracking-wide">
+                <div class="flex items-center justify-center space-x-6 text-sm text-orange-700 font-bold tracking-wide">
                     <div class="flex items-center space-x-2">
                         <span class="relative flex h-3 w-3">
-                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                          <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                         </span>
-                        <span class="text-emerald-400">Server Online</span>
+                        <span class="text-green-600">Server Online</span>
                     </div>
                     <div class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-cyan-500 rounded-full shadow-[0_0_5px_rgba(6,182,212,0.8)]"></span>
+                        <span class="w-2 h-2 bg-orange-500 rounded-full shadow-[0_0_5px_rgba(249,115,22,0.8)]"></span>
                         <span>WebGL 2.0</span>
                     </div>
                     <div class="flex items-center space-x-2">
-                        <span class="w-2 h-2 bg-purple-500 rounded-full shadow-[0_0_5px_rgba(168,85,247,0.8)]"></span>
+                        <span class="w-2 h-2 bg-yellow-500 rounded-full shadow-[0_0_5px_rgba(234,179,8,0.8)]"></span>
                         <span>Multiplayer</span>
                     </div>
                 </div>
-                <p class="text-slate-500 text-center mt-6 text-sm">
+                <p class="text-orange-600/80 text-center mt-6 text-sm font-medium">
                     Connection encrypted. Game loads directly via cloud streaming.
                 </p>
             </div>
         </section>
 
         <!-- How to Play -->
-        <section id="how-to-play" class="rounded-2xl p-8 md:p-12 mb-20 border border-white/5 bg-[#0d1321] fade-in-up">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-10 tracking-wide text-center">
-                How to Play <span class="text-cyan-400">Brush Jjaemu Online</span>
+        <section id="how-to-play" class="rounded-3xl p-8 md:p-12 mb-20 border-2 border-orange-200 bg-white/80 backdrop-blur-md shadow-xl fade-in-up">
+            <h2 class="text-2xl md:text-3xl font-black text-orange-950 mb-10 tracking-wide text-center">
+                How to Play <span class="text-orange-500">Brush Jjaemu Online</span>
             </h2>
             <div class="space-y-4 max-w-4xl mx-auto">
-                <div class="flex items-start space-x-6 p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-colors group">
-                    <div class="text-cyan-500 font-bold text-3xl opacity-50 group-hover:opacity-100 transition-opacity">01</div>
+                <div class="flex items-start space-x-6 p-6 rounded-2xl bg-orange-50/50 border border-orange-100 hover:border-orange-400 transition-colors group shadow-sm">
+                    <div class="text-orange-400 font-black text-3xl opacity-50 group-hover:opacity-100 transition-opacity">01</div>
                     <div>
-                        <h3 class="font-bold text-white mb-2 text-lg tracking-wide group-hover:text-cyan-400 transition-colors">Start Brushing</h3>
-                        <p class="text-slate-400 font-light leading-relaxed">
+                        <h3 class="font-bold text-orange-900 mb-2 text-lg tracking-wide group-hover:text-orange-600 transition-colors">Start Brushing</h3>
+                        <p class="text-orange-800/80 font-medium leading-relaxed">
                             Use your mouse or touch screen to control the brush.
                         </p>
                     </div>
                 </div>
-                <div class="flex items-start space-x-6 p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-colors group">
-                    <div class="text-cyan-500 font-bold text-3xl opacity-50 group-hover:opacity-100 transition-opacity">02</div>
+                <div class="flex items-start space-x-6 p-6 rounded-2xl bg-orange-50/50 border border-orange-100 hover:border-orange-400 transition-colors group shadow-sm">
+                    <div class="text-orange-400 font-black text-3xl opacity-50 group-hover:opacity-100 transition-opacity">02</div>
                     <div>
-                        <h3 class="font-bold text-white mb-2 text-lg tracking-wide group-hover:text-cyan-400 transition-colors">Follow the Pattern</h3>
-                        <p class="text-slate-400 font-light leading-relaxed">
+                        <h3 class="font-bold text-orange-900 mb-2 text-lg tracking-wide group-hover:text-orange-600 transition-colors">Follow the Pattern</h3>
+                        <p class="text-orange-800/80 font-medium leading-relaxed">
                             Gently brush the cat following Jjaemu’s needs.
                         </p>
                     </div>
                 </div>
-                <div class="flex items-start space-x-6 p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-colors group">
-                    <div class="text-cyan-500 font-bold text-3xl opacity-50 group-hover:opacity-100 transition-opacity">03</div>
+                <div class="flex items-start space-x-6 p-6 rounded-2xl bg-orange-50/50 border border-orange-100 hover:border-orange-400 transition-colors group shadow-sm">
+                    <div class="text-orange-400 font-black text-3xl opacity-50 group-hover:opacity-100 transition-opacity">03</div>
                     <div>
-                        <h3 class="font-bold text-white mb-2 text-lg tracking-wide group-hover:text-cyan-400 transition-colors">Avoid Obstacles</h3>
-                        <p class="text-slate-400 font-light leading-relaxed">
+                        <h3 class="font-bold text-orange-900 mb-2 text-lg tracking-wide group-hover:text-orange-600 transition-colors">Avoid Obstacles</h3>
+                        <p class="text-orange-800/80 font-medium leading-relaxed">
                             Keep an eye out for anything that might disturb Jjaemu's relaxation!
                         </p>
                     </div>
                 </div>
-                <div class="flex items-start space-x-6 p-6 rounded-xl bg-white/[0.02] border border-white/5 hover:border-cyan-500/30 transition-colors group">
-                    <div class="text-cyan-500 font-bold text-3xl opacity-50 group-hover:opacity-100 transition-opacity">04</div>
+                <div class="flex items-start space-x-6 p-6 rounded-2xl bg-orange-50/50 border border-orange-100 hover:border-orange-400 transition-colors group shadow-sm">
+                    <div class="text-orange-400 font-black text-3xl opacity-50 group-hover:opacity-100 transition-opacity">04</div>
                     <div>
-                        <h3 class="font-bold text-white mb-2 text-lg tracking-wide group-hover:text-cyan-400 transition-colors">Stay Fluffy</h3>
-                        <p class="text-slate-400 font-light leading-relaxed">
+                        <h3 class="font-bold text-orange-900 mb-2 text-lg tracking-wide group-hover:text-orange-600 transition-colors">Stay Fluffy</h3>
+                        <p class="text-orange-800/80 font-medium leading-relaxed">
                             The better you brush, the happier Jjaemu becomes. It's the ultimate relaxing cat game for a quick break.
                         </p>
                     </div>
@@ -370,58 +359,58 @@
 
         <!-- Core Features -->
         <section class="grid md:grid-cols-2 gap-8 mb-20 relative">
-            <div class="rounded-2xl p-8 border border-white/5 bg-[#0d1321] hover:border-cyan-500/30 transition-colors fade-in-up">
+            <div class="rounded-3xl p-8 border-2 border-orange-200 bg-white/80 backdrop-blur-md shadow-xl hover:border-orange-400 transition-colors fade-in-up">
                 <div class="flex items-center mb-6">
-                    <svg class="w-8 h-8 text-cyan-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    <h2 class="text-2xl font-bold text-white tracking-wide">
-                        What is <span class="text-cyan-400">Brush Jjaemu</span>?
+                    <svg class="w-8 h-8 text-orange-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <h2 class="text-2xl font-black text-orange-950 tracking-wide">
+                        What is <span class="text-orange-500">Brush Jjaemu</span>?
                     </h2>
                 </div>
-                <p class="text-slate-400 mb-5 leading-relaxed font-light">
+                <p class="text-orange-900 mb-5 leading-relaxed font-medium">
                     <strong>Brush Jjaemu</strong> (also frequently searched as Brush Jiaemu or Brush Jaime) is a viral, heartwarming indie game where you play as a dedicated groomer for a very fluffy cat named Jjaemu. 
                 </p>
-                <p class="text-slate-400 leading-relaxed mb-8 font-light">
+                <p class="text-orange-900 leading-relaxed mb-8 font-medium">
                     Created by the talented developer Byeorisim (Artbyeori), this game has taken Twitch and TikTok by storm thanks to its cozy vibes and addictive simplicity.
                 </p>
-                <div class="inline-flex items-center text-cyan-400 text-xs font-bold tracking-widest uppercase">
-                    <span class="w-2 h-2 bg-cyan-500 rounded-full mr-2"></span>
+                <div class="inline-flex items-center text-orange-600 text-xs font-bold tracking-widest uppercase bg-orange-100 px-3 py-1 rounded-full">
+                    <span class="w-2 h-2 bg-orange-500 rounded-full mr-2"></span>
                     Relaxing Cat Game
                 </div>
             </div>
 
-            <div class="rounded-2xl p-8 border border-white/5 bg-[#0d1321] hover:border-cyan-500/30 transition-colors fade-in-up" style="animation-delay: 0.2s;">
+            <div class="rounded-3xl p-8 border-2 border-orange-200 bg-white/80 backdrop-blur-md shadow-xl hover:border-orange-400 transition-colors fade-in-up" style="animation-delay: 0.2s;">
                 <div class="flex items-center mb-6">
-                    <svg class="w-8 h-8 text-cyan-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
-                    <h2 class="text-2xl font-bold text-white tracking-wide">
-                        <span class="text-cyan-400">Brush Jjaemu</span> Core Features
+                    <svg class="w-8 h-8 text-orange-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    <h2 class="text-2xl font-black text-orange-950 tracking-wide">
+                        <span class="text-orange-500">Brush Jjaemu</span> Core Features
                     </h2>
                 </div>
-                <ul class="space-y-4 text-slate-400 font-light mb-8">
-                    <li class="flex items-center">
-                        <svg class="w-5 h-5 text-cyan-500 mr-3 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <ul class="space-y-4 text-orange-900 font-bold mb-8">
+                    <li class="flex items-center bg-orange-50 p-3 rounded-xl">
+                        <svg class="w-5 h-5 text-orange-500 mr-3 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                         <span>Heartwarming indie gameplay</span>
                     </li>
-                    <li class="flex items-center">
-                        <svg class="w-5 h-5 text-cyan-500 mr-3 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <li class="flex items-center bg-orange-50 p-3 rounded-xl">
+                        <svg class="w-5 h-5 text-orange-500 mr-3 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                         <span>Simple cat brushing mechanics</span>
                     </li>
-                    <li class="flex items-center">
-                        <svg class="w-5 h-5 text-cyan-500 mr-3 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <li class="flex items-center bg-orange-50 p-3 rounded-xl">
+                        <svg class="w-5 h-5 text-orange-500 mr-3 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
                         <span>Relaxing ASMR vibes</span>
                     </li>
                 </ul>
-                <div class="grid grid-cols-3 gap-4 text-center text-xs font-bold tracking-wider uppercase border-t border-white/5 pt-6">
+                <div class="grid grid-cols-3 gap-4 text-center text-xs font-black tracking-wider uppercase border-t border-orange-200 pt-6">
                     <div>
-                        <div class="text-slate-300 mb-1">Browser</div>
-                        <div class="text-cyan-500/70 text-[10px]">No Install</div>
+                        <div class="text-orange-900 mb-1">Browser</div>
+                        <div class="text-orange-500 text-[10px]">No Install</div>
                     </div>
                     <div>
-                        <div class="text-slate-300 mb-1">Cross-Play</div>
-                        <div class="text-cyan-500/70 text-[10px]">All Devices</div>
+                        <div class="text-orange-900 mb-1">Cross-Play</div>
+                        <div class="text-orange-500 text-[10px]">All Devices</div>
                     </div>
                     <div>
-                        <div class="text-slate-300 mb-1">F2P</div>
-                        <div class="text-cyan-500/70 text-[10px]">100% Free</div>
+                        <div class="text-orange-900 mb-1">F2P</div>
+                        <div class="text-orange-500 text-[10px]">100% Free</div>
                     </div>
                 </div>
             </div>
@@ -429,112 +418,112 @@
 
         
         <!-- FAQ -->
-        <section id="faq" class="rounded-2xl p-8 md:p-12 mb-20 border border-white/5 bg-[#0d1321] fade-in-up relative overflow-hidden">
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-cyan-500/5 blur-[100px] rounded-full pointer-events-none"></div>
+        <section id="faq" class="rounded-3xl p-8 md:p-12 mb-20 border-2 border-orange-200 bg-white/80 backdrop-blur-md shadow-xl fade-in-up relative overflow-hidden">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-orange-300/20 blur-[100px] rounded-full pointer-events-none"></div>
             <div class="text-center mb-12 relative z-10">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 tracking-wide">
-                    Frequently Asked <span class="text-cyan-400">Questions</span>
+                <h2 class="text-2xl md:text-3xl font-black text-orange-950 mb-4 tracking-wide">
+                    Frequently Asked <span class="text-orange-500">Questions</span>
                 </h2>
-                <p class="text-slate-400 font-light">Everything you need to know about playing Brush Jjaemu Online</p>
+                <p class="text-orange-800 font-bold">Everything you need to know about playing Brush Jjaemu Online</p>
             </div>
             <div class="space-y-4 max-w-3xl mx-auto relative z-10">
-                <div class="bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:border-cyan-500/30 hover:bg-white/[0.04] transition-all duration-300 group">
-                    <h3 class="font-bold text-white text-lg mb-3 tracking-wide group-hover:text-cyan-400 transition-colors flex items-center">
-                        <span class="text-cyan-500 mr-3 text-xl opacity-50 group-hover:opacity-100 transition-opacity">Q.</span>
+                <div class="bg-orange-50/80 border border-orange-200 rounded-2xl p-6 hover:border-orange-400 hover:bg-white transition-all duration-300 group shadow-sm">
+                    <h3 class="font-black text-orange-950 text-lg mb-3 tracking-wide group-hover:text-orange-600 transition-colors flex items-center">
+                        <span class="text-orange-400 mr-3 text-xl opacity-70 group-hover:opacity-100 transition-opacity">Q.</span>
                         Is Brush Jjaemu unblocked for school?
                     </h3>
-                    <p class="text-slate-400 font-light leading-relaxed pl-8">Yes! This version is optimized to be unblocked at school or work. It uses an HTML5 iframe for maximum compatibility.</p>
+                    <p class="text-orange-900 font-medium leading-relaxed pl-8">Yes! This version is optimized to be unblocked at school or work. It uses an HTML5 iframe for maximum compatibility.</p>
                 </div>
-                <div class="bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:border-cyan-500/30 hover:bg-white/[0.04] transition-all duration-300 group">
-                    <h3 class="font-bold text-white text-lg mb-3 tracking-wide group-hover:text-cyan-400 transition-colors flex items-center">
-                        <span class="text-cyan-500 mr-3 text-xl opacity-50 group-hover:opacity-100 transition-opacity">Q.</span>
+                <div class="bg-orange-50/80 border border-orange-200 rounded-2xl p-6 hover:border-orange-400 hover:bg-white transition-all duration-300 group shadow-sm">
+                    <h3 class="font-black text-orange-950 text-lg mb-3 tracking-wide group-hover:text-orange-600 transition-colors flex items-center">
+                        <span class="text-orange-400 mr-3 text-xl opacity-70 group-hover:opacity-100 transition-opacity">Q.</span>
                         Do I need to download it?
                     </h3>
-                    <p class="text-slate-400 font-light leading-relaxed pl-8">No. You can play Brush Jjaemu online free directly in your browser (Chrome, Safari, Edge) with no download required.</p>
+                    <p class="text-orange-900 font-medium leading-relaxed pl-8">No. You can play Brush Jjaemu online free directly in your browser (Chrome, Safari, Edge) with no download required.</p>
                 </div>
-                <div class="bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:border-cyan-500/30 hover:bg-white/[0.04] transition-all duration-300 group">
-                    <h3 class="font-bold text-white text-lg mb-3 tracking-wide group-hover:text-cyan-400 transition-colors flex items-center">
-                        <span class="text-cyan-500 mr-3 text-xl opacity-50 group-hover:opacity-100 transition-opacity">Q.</span>
+                <div class="bg-orange-50/80 border border-orange-200 rounded-2xl p-6 hover:border-orange-400 hover:bg-white transition-all duration-300 group shadow-sm">
+                    <h3 class="font-black text-orange-950 text-lg mb-3 tracking-wide group-hover:text-orange-600 transition-colors flex items-center">
+                        <span class="text-orange-400 mr-3 text-xl opacity-70 group-hover:opacity-100 transition-opacity">Q.</span>
                         Where did the game originate?
                     </h3>
-                    <p class="text-slate-400 font-light leading-relaxed pl-8">It was originally released on Itch.io by Byeorisim. We provide a full-screen web version for easier access.</p>
+                    <p class="text-orange-900 font-medium leading-relaxed pl-8">It was originally released on Itch.io by Byeorisim. We provide a full-screen web version for easier access.</p>
                 </div>
-                <div class="bg-white/[0.02] border border-white/5 rounded-xl p-6 hover:border-cyan-500/30 hover:bg-white/[0.04] transition-all duration-300 group">
-                    <h3 class="font-bold text-white text-lg mb-3 tracking-wide group-hover:text-cyan-400 transition-colors flex items-center">
-                        <span class="text-cyan-500 mr-3 text-xl opacity-50 group-hover:opacity-100 transition-opacity">Q.</span>
+                <div class="bg-orange-50/80 border border-orange-200 rounded-2xl p-6 hover:border-orange-400 hover:bg-white transition-all duration-300 group shadow-sm">
+                    <h3 class="font-black text-orange-950 text-lg mb-3 tracking-wide group-hover:text-orange-600 transition-colors flex items-center">
+                        <span class="text-orange-400 mr-3 text-xl opacity-70 group-hover:opacity-100 transition-opacity">Q.</span>
                         Why is it called the "cat brush game"?
                     </h3>
-                    <p class="text-slate-400 font-light leading-relaxed pl-8">Because of its simple, satisfying mechanics—it's often called "game chải lông mèo" or simply the "brush cat game" by its global fan base.</p>
+                    <p class="text-orange-900 font-medium leading-relaxed pl-8">Because of its simple, satisfying mechanics—it's often called "game chải lông mèo" or simply the "brush cat game" by its global fan base.</p>
                 </div>
             </div>
         </section>
 
         <!-- Explore More Games -->
         <section class="mb-8 fade-in-up">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-10 text-center tracking-wide">
-                Explore <span class="text-cyan-400">More Games</span>
+            <h2 class="text-2xl md:text-3xl font-black text-orange-950 mb-10 text-center tracking-wide">
+                Explore <span class="text-orange-500">More Games</span>
             </h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <a href="#" class="group relative overflow-hidden rounded-xl aspect-video bg-[#0d1321] border border-white/5 shadow-2xl">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10"></div>
-                    <img src="https://via.placeholder.com/400x225/0B0F19/06b6d4?text=AI+RPG" alt="Brush Jjaemu cat game by Byeorisim - unblocked version" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70 group-hover:opacity-100">
+                <a href="#" class="group relative overflow-hidden rounded-2xl aspect-video bg-orange-100 border border-orange-200 shadow-xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-orange-950/80 via-orange-950/40 to-transparent z-10"></div>
+                    <img src="https://via.placeholder.com/400x225/f97316/ffffff?text=Cozy+Room" alt="Brush Jjaemu cat game by Byeorisim - unblocked version" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
                     <div class="absolute bottom-4 left-4 z-20 transform group-hover:-translate-y-2 transition-transform duration-300">
-                        <h3 class="text-white font-bold text-sm tracking-wider mb-1">AI RPG Generator</h3>
-                        <p class="text-cyan-500 text-xs font-bold tracking-widest uppercase">Adventure</p>
+                        <h3 class="text-white font-black text-sm tracking-wider mb-1">Cozy Room</h3>
+                        <p class="text-orange-300 text-xs font-bold tracking-widest uppercase">Relaxing</p>
                     </div>
-                    <div class="absolute inset-0 border-2 border-transparent group-hover:border-cyan-500/30 rounded-xl z-30 transition-colors duration-300"></div>
+                    <div class="absolute inset-0 border-4 border-transparent group-hover:border-orange-400/50 rounded-2xl z-30 transition-colors duration-300"></div>
                 </a>
-                <a href="#" class="group relative overflow-hidden rounded-xl aspect-video bg-[#0d1321] border border-white/5 shadow-2xl">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10"></div>
-                    <img src="https://via.placeholder.com/400x225/0B0F19/06b6d4?text=Space+Miner" alt="Cat brush game alternative - unblocked version" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70 group-hover:opacity-100">
+                <a href="#" class="group relative overflow-hidden rounded-2xl aspect-video bg-orange-100 border border-orange-200 shadow-xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-orange-950/80 via-orange-950/40 to-transparent z-10"></div>
+                    <img src="https://via.placeholder.com/400x225/f97316/ffffff?text=Cat+Cafe" alt="Cat brush game alternative - unblocked version" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
                     <div class="absolute bottom-4 left-4 z-20 transform group-hover:-translate-y-2 transition-transform duration-300">
-                        <h3 class="text-white font-bold text-sm tracking-wider mb-1">Space Miner</h3>
-                        <p class="text-cyan-500 text-xs font-bold tracking-widest uppercase">Strategy</p>
+                        <h3 class="text-white font-black text-sm tracking-wider mb-1">Cat Cafe</h3>
+                        <p class="text-orange-300 text-xs font-bold tracking-widest uppercase">Simulation</p>
                     </div>
-                    <div class="absolute inset-0 border-2 border-transparent group-hover:border-cyan-500/30 rounded-xl z-30 transition-colors duration-300"></div>
+                    <div class="absolute inset-0 border-4 border-transparent group-hover:border-orange-400/50 rounded-2xl z-30 transition-colors duration-300"></div>
                 </a>
-                <a href="#" class="group relative overflow-hidden rounded-xl aspect-video bg-[#0d1321] border border-white/5 shadow-2xl">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10"></div>
-                    <img src="https://via.placeholder.com/400x225/0B0F19/06b6d4?text=Zombie+Defense" alt="Relaxing browser game placeholder - unblocked version" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70 group-hover:opacity-100">
+                <a href="#" class="group relative overflow-hidden rounded-2xl aspect-video bg-orange-100 border border-orange-200 shadow-xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-orange-950/80 via-orange-950/40 to-transparent z-10"></div>
+                    <img src="https://via.placeholder.com/400x225/f97316/ffffff?text=Dog+Walker" alt="Relaxing browser game placeholder - unblocked version" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
                     <div class="absolute bottom-4 left-4 z-20 transform group-hover:-translate-y-2 transition-transform duration-300">
-                        <h3 class="text-white font-bold text-sm tracking-wider mb-1">Zombie Defense</h3>
-                        <p class="text-cyan-500 text-xs font-bold tracking-widest uppercase">Action</p>
+                        <h3 class="text-white font-black text-sm tracking-wider mb-1">Dog Walker</h3>
+                        <p class="text-orange-300 text-xs font-bold tracking-widest uppercase">Casual</p>
                     </div>
-                    <div class="absolute inset-0 border-2 border-transparent group-hover:border-cyan-500/30 rounded-xl z-30 transition-colors duration-300"></div>
+                    <div class="absolute inset-0 border-4 border-transparent group-hover:border-orange-400/50 rounded-2xl z-30 transition-colors duration-300"></div>
                 </a>
-                <a href="#" class="group relative overflow-hidden rounded-xl aspect-video bg-[#0d1321] border border-white/5 shadow-2xl">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10"></div>
-                    <img src="https://via.placeholder.com/400x225/0B0F19/06b6d4?text=City+Builder" alt="More games like Brush Jjaemu - unblocked version" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-70 group-hover:opacity-100">
+                <a href="#" class="group relative overflow-hidden rounded-2xl aspect-video bg-orange-100 border border-orange-200 shadow-xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-orange-950/80 via-orange-950/40 to-transparent z-10"></div>
+                    <img src="https://via.placeholder.com/400x225/f97316/ffffff?text=Pet+Shop" alt="More games like Brush Jjaemu - unblocked version" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-90 group-hover:opacity-100">
                     <div class="absolute bottom-4 left-4 z-20 transform group-hover:-translate-y-2 transition-transform duration-300">
-                        <h3 class="text-white font-bold text-sm tracking-wider mb-1">City Builder</h3>
-                        <p class="text-cyan-500 text-xs font-bold tracking-widest uppercase">Simulation</p>
+                        <h3 class="text-white font-black text-sm tracking-wider mb-1">Pet Shop</h3>
+                        <p class="text-orange-300 text-xs font-bold tracking-widest uppercase">Tycoon</p>
                     </div>
-                    <div class="absolute inset-0 border-2 border-transparent group-hover:border-cyan-500/30 rounded-xl z-30 transition-colors duration-300"></div>
+                    <div class="absolute inset-0 border-4 border-transparent group-hover:border-orange-400/50 rounded-2xl z-30 transition-colors duration-300"></div>
                 </a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-white/10 bg-[#06090f] text-slate-400 py-12 px-4 mt-20 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-cyan-500/5 via-transparent to-transparent"></div>
+    <footer class="border-t border-orange-200 bg-orange-100/50 text-orange-900 py-12 px-4 mt-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-orange-300/20 via-transparent to-transparent"></div>
         <div class="max-w-6xl mx-auto text-center relative z-10">
-            <h2 class="text-2xl font-bold mb-4 text-white tracking-wide">Ready to Brush Jjaemu?</h2>
-            <p class="text-slate-500 mb-8 font-light">
+            <h2 class="text-2xl font-black mb-4 text-orange-950 tracking-wide">Ready to Brush Jjaemu?</h2>
+            <p class="text-orange-800 mb-8 font-medium">
                 Help Jjaemu stay fluffy in this relaxing browser game!
             </p>
-            <div class="inline-block w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mb-8"></div>
-            <div class="text-sm text-slate-500 font-light space-y-2">
+            <div class="inline-block w-24 h-2 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full mb-8"></div>
+            <div class="text-sm text-orange-800/80 font-bold space-y-2">
                 <p><strong>Credits:</strong> Original game by Artbyeori (Byeorisim). Support the creator on Itch.io!</p>
                 <p><strong>Vibe Note:</strong> Optimized for the best "Vibe Coding" experience. Stay Chill.</p>
                 <p><strong>Copyright:</strong> &copy; 2026 BrushJjaemu-Fansite. All rights reserved.</p>
             </div>
             
             <!-- SEO Hidden Text -->
-            <div class="mt-8 pt-8 border-t border-white/5 text-left">
+            <div class="mt-8 pt-8 border-t border-orange-200/50 text-left">
                 <details class="group">
-                    <summary class="text-xs text-slate-600 cursor-pointer hover:text-cyan-400 transition-colors list-none outline-none text-center">Read More</summary>
-                    <div class="mt-4 text-xs text-slate-600 font-light">
+                    <summary class="text-xs text-orange-600/60 cursor-pointer hover:text-orange-600 transition-colors list-none outline-none text-center font-bold">Read More</summary>
+                    <div class="mt-4 text-xs text-orange-800/70 font-medium">
                         <p>Play Brush Jjaemu Game Online unblocked and full screen. The ultimate cat brush game (game chải lông mèo) by Byeorisim. Find out how to brush the cat, keep Jjaemu happy, and enjoy a relaxing ASMR experience directly in your browser.</p>
                     </div>
                 </details>
@@ -684,31 +673,43 @@
         });
 
         // Game loading simulation
-        function simulateGameLoading() {
+        function startGame() {
             const loadingElement = document.getElementById('game-loading');
             const iframe = document.getElementById('game-iframe');
             
-            setTimeout(() => {
-                if (loadingElement && loadingElement.style.display !== 'none') {
-                    loadingElement.innerHTML = `
-                        <div class="text-center">
-                            <div class="text-cyan-500 mb-4 flex justify-center">
-                                <svg class="w-12 h-12 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                            </div>
-                            <p class="text-cyan-400 font-bold tracking-widest uppercase mb-2 text-sm">Establishing Link...</p>
-                            <div class="w-48 bg-slate-800 rounded-full h-1 mt-4 mx-auto overflow-hidden">
-                                <div class="bg-cyan-500 h-1 rounded-full relative" style="width: 85%; transition: width 2s;">
-                                    <div class="absolute inset-0 bg-white/20 animate-pulse"></div>
-                                </div>
-                            </div>
+            // Start Loading Animation
+            loadingElement.innerHTML = `
+                <div class="text-center">
+                    <div class="text-orange-500 mb-4 flex justify-center">
+                        <svg class="w-12 h-12 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    </div>
+                    <p class="text-orange-600 font-bold tracking-widest uppercase mb-2 text-sm">Waking up Jjaemu...</p>
+                    <div class="w-48 bg-orange-200 rounded-full h-1 mt-4 mx-auto overflow-hidden">
+                        <div class="bg-orange-500 h-1 rounded-full relative" style="width: 100%; transition: width 1s;">
+                            <div class="absolute inset-0 bg-white/20 animate-pulse"></div>
                         </div>
-                    `;
-                }
-            }, 2000);
+                    </div>
+                </div>
+            `;
+            
+            // Prevent multiple clicks
+            loadingElement.onclick = null;
+            loadingElement.style.cursor = 'default';
+            
+            // Set iframe src to trigger load
+            iframe.src = iframe.getAttribute('data-src');
+            
+            // Hide mask after a short delay to let game load
+            setTimeout(() => {
+                loadingElement.style.opacity = '0';
+                setTimeout(() => {
+                    loadingElement.style.display = 'none';
+                }, 500);
+            }, 1500);
         }
 
-        // Call loading simulation
-        simulateGameLoading();
+        // Remove the automatic call
+        // simulateGameLoading();
         // Theme toggle logic
         const themeToggleBtn = document.getElementById('theme-toggle');
         const darkIcon = document.getElementById('theme-toggle-dark-icon');
