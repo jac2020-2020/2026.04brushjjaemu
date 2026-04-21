@@ -1,0 +1,1210 @@
+<!DOCTYPE html><html lang="ja"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brush Jjaemu オンラインゲーム - 全画面で遊べる癒やし系猫の毛づくろいゲーム</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/logo.png">
+    <link rel="apple-touch-icon" href="/logo.png">
+    
+    <meta name="description" content="Brush Jjaemuゲームをオンラインでブロック解除して全画面でプレイ。artbyeoriによる究極の猫の毛づくろいゲーム（game chải lông mèo）。猫をブラッシングし、Jjaemuを幸せに保ち、ブラウザで直接リラックスできるASMR体験を楽しむ方法を見つけてください。">
+    <meta name="keywords" content="Brush Jjaemu, cat brush game, Brush Jjaemu unblocked, artbyeori, play cat game online">
+    <meta name="author" content="BrushJjaemu.fun">
+    <meta property="og:title" content="Brush Jjaemu オンラインゲーム - 全画面で遊べる癒やし系猫の毛づくろいゲーム">
+    <meta property="og:description" content="Brush Jjaemuゲームをオンラインでブロック解除して全画面でプレイ。artbyeoriによる究極の猫の毛づくろいゲーム（game chải lông mèo）。猫をブラッシングし、Jjaemuを幸せに保ち、ブラウザで直接リラックスできるASMR体験を楽しむ方法を見つけてください。">
+    <meta property="og:url" content="https://brushjjaemu.fun/ja/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://brushjjaemu.fun/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@BrushJjaemu">
+    <meta name="twitter:title" content="Brush Jjaemu オンラインゲーム - 全画面で遊べる癒やし系猫の毛づくろいゲーム">
+    <meta name="twitter:description" content="Brush Jjaemuゲームをオンラインでブロック解除して全画面でプレイ。artbyeoriによる究極の猫の毛づくろいゲーム（game chải lông mèo）。猫をブラッシングし、Jjaemuを幸せに保ち、ブラウザで直接リラックスできるASMR体験を楽しむ方法を見つけてください。">
+    <meta name="twitter:image" content="https://brushjjaemu.fun/og.png">
+    <link rel="canonical" href="https://brushjjaemu.fun/ja/">
+    <link rel="alternate" hreflang="en" href="https://brushjjaemu.fun/">
+    <link rel="alternate" hreflang="vi" href="https://brushjjaemu.fun/vi/">
+    <link rel="alternate" hreflang="ar" href="https://brushjjaemu.fun/ar/">
+    <link rel="alternate" hreflang="zh" href="https://brushjjaemu.fun/zh/">
+    <link rel="alternate" hreflang="ja" href="https://brushjjaemu.fun/ja/">
+    <link rel="alternate" hreflang="ko" href="https://brushjjaemu.fun/ko/">
+    <link rel="alternate" hreflang="fr" href="https://brushjjaemu.fun/fr/">
+    <link rel="alternate" hreflang="lo" href="https://brushjjaemu.fun/lo/">
+    <link rel="alternate" hreflang="x-default" href="https://brushjjaemu.fun/">
+    <!-- Favicon for Better UX -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
+    <!-- Modern Gaming Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&amp;display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                    },
+                    colors: {
+                        'game-bg': '#FFF5E6',
+                        'game-card': 'rgba(255, 255, 255, 0.9)',
+                        'game-border': 'rgba(251, 146, 60, 0.2)',
+                        'cat-orange': '#f97316',
+                        'cat-light': '#fdba74',
+                        'cat-dark': '#c2410c',
+                        'cat-text': '#431407',
+                    },
+                    boxShadow: {
+                        'cat-glow': '0 0 15px rgba(249, 115, 22, 0.3)',
+                        'glass': '0 8px 32px 0 rgba(249, 115, 22, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #FFF5E6;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(253, 186, 116, 0.2), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(249, 115, 22, 0.15), transparent 25%);
+            background-attachment: fixed;
+            color: #7c2d12;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .dark body {
+            background-color: #0f172a;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(249, 115, 22, 0.05), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(253, 186, 116, 0.05), transparent 25%);
+            color: #ffedd5;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .game-iframe {
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 4px solid #fed7aa;
+        }
+        
+        .game-iframe:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(249, 115, 22, 0.25);
+            border-color: #f97316;
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: var(--tw-colors-game-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 2px solid var(--tw-colors-game-border);
+            box-shadow: 0 8px 32px 0 rgba(249, 115, 22, 0.1);
+            border-radius: 24px;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(249, 115, 22, 0.15);
+            border-color: rgba(249, 115, 22, 0.3);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #f97316, #fb923c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .loading-spinner {
+            border: 4px solid rgba(249, 115, 22, 0.2);
+            border-top: 4px solid #f97316;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .game-container {
+            position: relative;
+            background: radial-gradient(circle at center, rgba(253, 186, 116, 0.2) 0%, transparent 70%);
+            border: 2px dashed rgba(251, 146, 60, 0.3);
+            border-radius: 24px;
+        }
+        
+        .feature-icon {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: linear-gradient(135deg, #f97316, #fbbf24);
+            box-shadow: 0 0 15px rgba(249, 115, 22, 0.3);
+        }
+        
+        .feature-icon:hover {
+            transform: rotate(360deg) scale(1.2);
+            box-shadow: 0 0 25px rgba(249, 115, 22, 0.5);
+        }
+
+        .ad-slot:empty {
+            display: none;
+        }
+
+        .ad-slot {
+            background: rgba(249, 115, 22, 0.05);
+            border: 2px dashed rgba(249, 115, 22, 0.15);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .ad-slot--banner {
+            width: 100%;
+            min-height: 90px;
+        }
+
+        .ad-slot--side {
+            width: 160px;
+            height: 600px;
+        }
+
+        /* Custom Scrollbar for Comments */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(251, 146, 60, 0.1);
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(251, 146, 60, 0.4);
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(251, 146, 60, 0.6);
+        }
+
+        /* Empty Star Style */
+        .star-empty {
+            fill: transparent;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+        .star-filled {
+            fill: currentColor;
+            stroke: currentColor;
+            stroke-width: 2;
+        }
+    </style>
+</head>
+<body class="bg-game-bg dark:bg-slate-900 text-orange-900 dark:text-orange-100 font-sans leading-relaxed">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-orange-50/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-orange-200 dark:border-slate-700 transition-colors duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo and Name -->
+                <div class="flex items-center space-x-3">
+                    <img src="../logo.png" alt="Brush Jjaemu Game Logo - Play Cat Brush Game" class="h-10 w-10 rounded-lg shadow-[0_0_10px_rgba(249,115,22,0.3)] object-cover">
+                    <span class="text-xl font-extrabold text-orange-950 dark:text-orange-50 tracking-wide">Brush Jjaemu</span>
+                </div>
+                
+                <!-- Navigation Links & Actions -->
+                <div class="flex items-center space-x-4 md:space-x-6">
+                    <div class="hidden md:flex items-center space-x-6">
+                        <a href="#about" data-i18n="nav_about" class="text-sm font-bold text-orange-800 dark:text-orange-200 hover:text-orange-600 transition-colors">概要</a>
+                        <a href="#how-to-play" data-i18n="nav_how_to_play" class="text-sm font-bold text-orange-800 dark:text-orange-200 hover:text-orange-600 transition-colors">遊び方</a>
+                        <a href="#faq" data-i18n="nav_faq" class="text-sm font-bold text-orange-800 dark:text-orange-200 hover:text-orange-600 transition-colors">よくある質問</a>
+                    </div>
+                    
+                    <div class="flex items-center space-x-3 md:border-l md:border-orange-200 dark:border-slate-700 md:pl-6">
+                        <!-- Language Switcher -->
+                        <div class="relative">
+                            <button id="lang-toggle" class="text-orange-800 dark:text-orange-200 hover:text-orange-600 transition-colors flex items-center justify-center w-8 h-8 rounded-full hover:bg-orange-200 dark:bg-slate-700 dark:hover:bg-slate-600" title="Switch Language">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                            </button>
+                            <!-- Language Dropdown -->
+                            <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-44 bg-white/95 dark:bg-slate-800/95 backdrop-blur-md border border-orange-200 dark:border-slate-700 rounded-xl shadow-2xl py-2 z-50 transform origin-top-right transition-all">
+                                <a href="/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">English</a>
+                                <a href="/vi/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">Tiếng Việt</a>
+                                <a href="/ar/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" dir="rtl">العربية</a>
+                                <a href="/zh/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">简体中文</a>
+                                <a href="/ja/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">日本語</a>
+                                <a href="/ko/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">한국어</a>
+                                <a href="/fr/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">Français</a>
+                                <a href="/lo/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">ລາວ</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Theme Toggle -->
+                        <button id="theme-toggle" class="text-orange-800 dark:text-orange-200 hover:text-orange-600 transition-colors flex items-center justify-center w-8 h-8 rounded-full hover:bg-orange-200 dark:bg-slate-700 dark:hover:bg-slate-600" title="Toggle Theme">
+                            <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                            <svg id="theme-toggle-light-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <aside id="ad-left" class="ad-slot ad-slot--side hidden 2xl:block fixed left-4 top-32 z-20"></aside>
+    <aside id="ad-right" class="ad-slot ad-slot--side hidden 2xl:block fixed right-4 top-32 z-20"></aside>
+    <!-- Header -->
+    <header class="bg-game-bg dark:bg-slate-900 text-orange-950 dark:text-orange-50 pt-24 pb-8 px-4 relative overflow-hidden border-b border-orange-200 dark:border-slate-700">
+        <div class="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6bTIwIDIwYzAtMTEuMDQ2IDguOTU0LTIwIDIwLTIwczIwIDguOTU0IDIwIDIwTDAlMjB6IiBmaWxsPSIjZmI5MjNjIiBmaWxsLW9wYWNpdHk9Ii40IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=')]"></div>
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-orange-300/20 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div class="max-w-6xl mx-auto text-center relative z-10 fade-in-up">
+            <h1 class="text-4xl md:text-5xl font-black mb-3 text-orange-950 dark:text-orange-50 tracking-tight" data-i18n="hero_title">Brush Jjaemu オンラインゲーム</h1>
+            <h2 class="text-lg md:text-xl text-orange-800 dark:text-orange-200 max-w-3xl mx-auto mb-6 font-bold" data-i18n="hero_subtitle">究極の癒し系猫ゲーム。ダウンロード不要で全画面でJjaemuの毛づくろいをしよう。</h2>
+            <div class="inline-flex items-center space-x-3 bg-white dark:bg-slate-800/50 border border-orange-200 dark:border-slate-700 rounded-full px-6 py-2 shadow-sm backdrop-blur-sm">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
+                </span>
+                <span class="text-orange-900 dark:text-orange-100 text-sm font-bold tracking-wide uppercase" data-i18n="hero_badge">無料プレイ • ダウンロード不要</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-[90rem] mx-auto px-4 py-8 relative z-10">
+        <!-- Game Container -->
+        <section class="mb-12 fade-in-up relative">
+            <div class="rounded-3xl p-4 md:p-6 border-2 border-orange-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 backdrop-blur-md shadow-2xl relative z-10">
+                <div class="flex items-center justify-between mb-4 px-2">
+                    <h2 class="text-2xl font-black text-orange-950 dark:text-orange-50 tracking-wide flex items-center">
+                        <svg class="w-6 h-6 me-2 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span data-i18n="play_now">今すぐプレイ</span>
+                    </h2>
+                </div>
+                <div id="ad-game-top" class="ad-slot ad-slot--banner mb-4"></div>
+                <div class="grid lg:grid-cols-4 gap-6 mb-4">
+                    <!-- Game Area -->
+                    <div class="lg:col-span-3 game-container p-2 md:p-4">
+                        <div class="relative w-full group overflow-hidden rounded-2xl" style="padding-bottom: 65%;">
+                            <!-- Game Loading Overlay / Start Mask -->
+                            <div id="game-loading" class="absolute inset-0 flex flex-col items-center justify-center bg-black rounded-2xl z-20 transition-opacity duration-300 cursor-pointer" onclick="startGame()">
+                                <div class="text-center">
+                                    <img src="../logo.png" alt="Brush Jjaemu Unblocked Game - Cat Grooming ASMR" class="w-24 h-24 mx-auto mb-4 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
+                                    <div class="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-black rounded-full shadow-[0_0_15px_rgba(249,115,22,0.4)] transition-all">
+                                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
+                                        Click to Start
+                                    </div>
+                                </div>
+                            </div>
+                            <iframe id="game-iframe" src="https://pub-4ca9553e3b5141e2b08c8798afcf2641.r2.dev/game/brush-jjaemu/index.html" class="absolute top-0 left-0 w-full h-full game-iframe border-0 opacity-100 bg-black" allowfullscreen="true" scrolling="no" webkitallowfullscreen="true" mozallowfullscreen="true" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="autoplay; fullscreen; keyboard-attach" loading="lazy" title="Brush Jjaemu Game">
+                            </iframe>
+                            <div class="absolute bottom-4 right-4 z-30 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <a href="#how-to-play" class="bg-white dark:bg-slate-800/90 hover:bg-orange-100 dark:hover:bg-slate-600 dark:bg-slate-700 border border-orange-300 dark:border-slate-600 hover:border-orange-500 text-orange-600 hover:text-orange-700 w-10 h-10 rounded-xl backdrop-blur-md transition-all flex items-center justify-center shadow-lg" title="Help / Guide">
+                                    <span class="text-lg">💡</span>
+                                </a>
+                                <button onclick="const f = document.getElementById('game-iframe'); if(f.requestFullscreen) f.requestFullscreen(); else if(f.webkitRequestFullscreen) f.webkitRequestFullscreen();" class="bg-white dark:bg-slate-800/90 hover:bg-orange-100 dark:hover:bg-slate-600 dark:bg-slate-700 border border-orange-300 dark:border-slate-600 hover:border-orange-500 text-orange-600 hover:text-orange-700 w-10 h-10 rounded-xl backdrop-blur-md transition-all flex items-center justify-center shadow-lg" title="Full Screen">
+                                    <span class="text-lg">⛶</span>
+                                </button>
+                            </div>
+                            <!-- Social Share Bar (In-Game) -->
+                            <div class="absolute top-4 right-4 z-30 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                                <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fbrushjjaemu.fun&amp;text=I'm%20trying%20to%20keep%20Jjaemu%20fluffy!%20%F0%9F%90%B1%20Play%20the%20relaxing%20Brush%20Jjaemu%20game%20unblocked%20and%20free%20here%3A" target="_blank" rel="noopener noreferrer" class="bg-black/40 hover:bg-[#1DA1F2] text-white p-2 rounded-full backdrop-blur-sm transition-colors shadow-lg" title="Share on X (Twitter)">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 5.961h-1.92z"></path></svg>
+                                </a>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbrushjjaemu.fun" target="_blank" rel="noopener noreferrer" class="bg-black/40 hover:bg-[#1877F2] text-white p-2 rounded-full backdrop-blur-sm transition-colors shadow-lg" title="Share on Facebook">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z"></path></svg>
+                                </a>
+                                <a href="https://reddit.com/submit?url=https%3A%2F%2Fbrushjjaemu.fun&amp;title=Play%20the%20relaxing%20Brush%20Jjaemu%20cat%20game%20unblocked!" target="_blank" rel="noopener noreferrer" class="bg-black/40 hover:bg-[#FF4500] text-white p-2 rounded-full backdrop-blur-sm transition-colors shadow-lg" title="Share on Reddit">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1.895-6.732c-.11-.11-.295-.11-.406 0l-1.077 1.078a.286.286 0 0 1-.406 0 .288.288 0 0 1 0-.406l1.077-1.078c.335-.335.88-.335 1.216 0l1.078 1.078a.288.288 0 0 1 0 .406.286.286 0 0 1-.406 0l-1.076-1.078zM12 12.868c-1.87 0-3.385.945-3.385 2.11 0 1.165 1.515 2.11 3.385 2.11 1.87 0 3.386-.945 3.386-2.11 0-1.165-1.516-2.11-3.386-2.11zm0 3.42c-1.144 0-2.072-.587-2.072-1.31 0-.723.928-1.31 2.072-1.31 1.145 0 2.073.587 2.073 1.31 0 .723-.928 1.31-2.073 1.31zM9.54 10.98c.67 0 1.214-.545 1.214-1.215 0-.67-.544-1.215-1.215-1.215-.67 0-1.214.545-1.214 1.215 0 .67.544 1.215 1.214 1.215zm4.92 0c.67 0 1.214-.545 1.214-1.215 0-.67-.544-1.215-1.215-1.215-.67 0-1.214.545-1.214 1.215 0 .67.544 1.215 1.214 1.215zm-.168-3.414l1.248-2.613a.288.288 0 0 1 .386-.118l1.455.836a2.03 2.03 0 0 1 2.825 2.81 2.03 2.03 0 0 1-2.824-2.81l-1.173-.674-.98 2.052a7.35 7.35 0 0 1 3.01 4.54h.873a.287.287 0 0 1 .288.288v1.724a.288.288 0 0 1-.288.288h-1.264c-.495 2.585-3.056 4.52-6.103 4.52-3.048 0-5.61-1.935-6.104-4.52H4.288a.288.288 0 0 1-.288-.288v-1.724a.288.288 0 0 1 .288-.288h.873a7.35 7.35 0 0 1 3.01-4.54l-.98-2.052-1.173.674a2.03 2.03 0 0 1-2.825 2.81 2.03 2.03 0 0 1 2.825-2.81l1.454-.836a.288.288 0 0 1 .386.118l1.248 2.613a7.31 7.31 0 0 1 5.188 0z"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Player Notes / Comments Area -->
+                    <div class="lg:col-span-1 bg-orange-50/50 dark:bg-slate-800/50 border border-orange-200 dark:border-slate-700 rounded-3xl p-6 flex flex-col h-[600px] lg:h-[700px] overflow-hidden shadow-inner">
+                        <h3 class="font-black text-orange-950 dark:text-orange-50 text-xl mb-4 tracking-wide flex items-center shrink-0">
+                            <svg class="w-5 h-5 me-2 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                            <span data-i18n="player_notes_title">プレイヤーノート</span>
+                        </h3>
+                        
+                        <div class="bg-white dark:bg-slate-800 border border-orange-200 dark:border-slate-700 rounded-xl p-3 mb-6 flex items-center justify-between shadow-sm shrink-0">
+                            <span class="text-orange-900 dark:text-orange-100 font-bold text-sm"><span data-i18n="avg_rating">平均評価:</span> <span class="text-orange-600" id="average-rating">0.0 / 5</span></span>
+                            <span class="text-orange-500/60 text-xs font-bold" id="total-notes">(0 notes)</span>
+                        </div>
+
+                        <div class="text-xs font-black text-orange-800 dark:text-orange-200/50 tracking-widest uppercase mb-4 shrink-0" data-i18n="published_notes">公開されたノート</div>
+                        
+                        <!-- Comments List -->
+                        <div class="flex-1 overflow-y-auto pr-2 space-y-5 custom-scrollbar relative" id="comments-list">
+                            <!-- Loading State -->
+                            <div id="comments-loading" class="absolute inset-0 flex flex-col items-center justify-center bg-orange-50/80 backdrop-blur-sm z-10 rounded-xl">
+                                <div class="loading-spinner mb-3"></div>
+                                <span class="text-orange-600 font-bold text-sm tracking-wider animate-pulse">Loading Notes...</span>
+                            </div>
+                            
+                            <!-- Empty State -->
+                            <div id="comments-empty" class="hidden h-full flex-col items-center justify-center text-center px-4">
+                                <svg class="w-12 h-12 text-orange-300 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                                <p class="text-orange-900 dark:text-orange-100 font-bold mb-1">No notes yet</p>
+                                <p class="text-orange-500/70 text-xs">Be the first to share your thoughts on Brush Jjaemu!</p>
+                            </div>
+                        </div>
+
+                        <!-- Add Note Form -->
+                        <div class="mt-4 pt-4 border-t border-orange-200 dark:border-slate-700 shrink-0">
+                            <div class="text-xs font-black text-orange-800 dark:text-orange-200/50 tracking-widest uppercase mb-3" data-i18n="add_note">ノートを追加</div>
+                            <div class="space-y-2">
+                                <input type="text" id="note-name" placeholder="表示名" data-i18n-placeholder="display_name" class="w-full bg-white dark:bg-slate-800 border border-orange-200 dark:border-slate-700 rounded-lg px-3 py-2 text-sm text-orange-900 dark:text-orange-100 font-medium placeholder-orange-300 dark:placeholder-slate-400 focus:outline-none focus:border-orange-400 dark:focus:border-orange-500 focus:ring-1 focus:ring-orange-400 dark:focus:ring-orange-500 transition-all">
+                                <textarea id="note-content" placeholder="このゲームについてどう思いますか？" data-i18n-placeholder="note_placeholder" rows="2" class="w-full bg-white dark:bg-slate-800 border border-orange-200 dark:border-slate-700 rounded-lg px-3 py-2 text-sm text-orange-900 dark:text-orange-100 font-medium placeholder-orange-300 dark:placeholder-slate-400 focus:outline-none focus:border-orange-400 dark:focus:border-orange-500 focus:ring-1 focus:ring-orange-400 dark:focus:ring-orange-500 transition-all resize-none"></textarea>
+                                
+                                <div class="flex items-center justify-between mt-2">
+                                    <div class="flex space-x-1 cursor-pointer" id="star-rating">
+                                        <svg class="w-6 h-6 text-orange-300 hover:text-yellow-400 transition-colors star-filled" data-value="1" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                                        <svg class="w-6 h-6 text-orange-300 hover:text-yellow-400 transition-colors star-filled" data-value="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                                        <svg class="w-6 h-6 text-orange-300 hover:text-yellow-400 transition-colors star-filled" data-value="3" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                                        <svg class="w-6 h-6 text-orange-300 hover:text-yellow-400 transition-colors star-filled" data-value="4" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                                        <svg class="w-6 h-6 text-orange-300 hover:text-yellow-400 transition-colors star-filled" data-value="5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                                    </div>
+                                    <button id="post-note-btn" class="w-24 bg-orange-100 dark:bg-slate-700 hover:bg-orange-500 text-orange-600 hover:text-white border border-orange-200 dark:border-slate-700 hover:border-orange-500 font-bold rounded-lg px-4 py-2 text-sm transition-colors shadow-sm" data-i18n="post_btn">投稿</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="ad-game-bottom" class="ad-slot ad-slot--banner mt-2"></div>
+            </div>
+        </section>
+
+        <!-- What is Brush Jjaemu? -->
+        <section id="about" class="mb-20 relative">
+            <div class="rounded-3xl p-8 md:p-12 border-2 border-orange-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 backdrop-blur-md shadow-xl hover:border-orange-400 transition-colors fade-in-up">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                    <div class="text-left space-y-6">
+                        <h2 class="text-3xl md:text-4xl font-black text-orange-950 dark:text-orange-50 tracking-wide" data-i18n="about_title"><span class="text-orange-500">Brush Jjaemu</span>とは？</h2>
+                        <p class="text-orange-900 dark:text-orange-100 text-lg leading-relaxed font-medium" data-i18n="about_p1"><strong>Brush Jjaemu</strong>（Brush JiaemuやBrush Jaimeゲームとしてもよく検索されます）は、Jjaemuという非常にふわふわした猫の専属トリマーとしてプレイする、バイラルで心温まるインディーゲームです。</p>
+                        <p class="text-orange-900 dark:text-orange-100 text-lg leading-relaxed font-medium" data-i18n="about_p2">才能ある開発者<strong>artbyeori</strong>によって<strong>Itch.io</strong>で最初にリリースされたこのシンプルな<strong>猫の毛づくろいゲーム</strong>は、その信じられないほどリラックスできるASMRのような雰囲気で、TikTokや<strong>Reddit</strong>コミュニティで瞬く間にバイラルになりました。<em>Brush Jam itch io</em>ヒットと呼んでも、<em>game chải lông mèo</em>と呼んでも、目標は同じです。茶トラ猫を完璧に毛づくろいした状態に保つことです！</p>
+                        <div class="pt-2">
+                            <div class="inline-flex items-center text-orange-600 text-sm font-bold tracking-widest uppercase bg-orange-100 dark:bg-slate-700 px-6 py-3 rounded-full shadow-sm">
+                                <span class="w-2.5 h-2.5 bg-orange-500 rounded-full me-3 animate-pulse"></span>
+                                <span data-i18n="about_badge">最高評価の癒し系猫ゲーム</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[4/3]">
+                        <div class="absolute inset-0 bg-orange-200 dark:bg-slate-700 rounded-2xl transform translate-x-3 translate-y-3 z-0"></div>
+                        <img src="../brush-jjaemu.png" alt="Brush Jjaemu Game Screenshot - Cat Brush Game on itch.io" class="absolute inset-0 w-full h-full rounded-2xl border-4 border-white shadow-lg object-contain bg-white dark:bg-slate-800 hover:scale-[1.02] transition-transform duration-500 z-10">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Play -->
+        <section id="how-to-play" class="rounded-3xl p-8 md:p-12 mb-20 border-2 border-orange-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 backdrop-blur-md shadow-xl fade-in-up">
+            <h2 class="text-2xl md:text-3xl font-black text-orange-950 dark:text-orange-50 mb-12 tracking-wide text-center" data-i18n="htp_title"><span class="text-orange-500">Brush Jjaemu Online</span>の遊び方</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div class="flex flex-col items-center text-center space-y-4 p-6 rounded-2xl bg-orange-50/50 dark:bg-slate-800/50 border border-orange-100 dark:border-slate-600 hover:border-orange-400 dark:hover:border-orange-500 hover:bg-white dark:hover:bg-slate-800 transition-all duration-300 group shadow-sm">
+                    <div class="w-16 h-16 rounded-full bg-orange-100 dark:bg-slate-700 flex items-center justify-center text-orange-500 font-black text-2xl group-hover:bg-orange-500 group-hover:text-white transition-colors shadow-inner">01</div>
+                    <div>
+                        <h3 class="font-bold text-orange-950 dark:text-orange-50 mb-2 text-lg tracking-wide" data-i18n="htp_step1_title">毛づくろいを始める</h3>
+                        <p class="text-orange-800 dark:text-orange-200/80 font-medium text-sm leading-relaxed" data-i18n="htp_step1_desc">マウスまたはタッチスクリーンを使用してブラシを操作します。</p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center text-center space-y-4 p-6 rounded-2xl bg-orange-50/50 dark:bg-slate-800/50 border border-orange-100 dark:border-slate-600 hover:border-orange-400 dark:hover:border-orange-500 hover:bg-white dark:hover:bg-slate-800 transition-all duration-300 group shadow-sm">
+                    <div class="w-16 h-16 rounded-full bg-orange-100 dark:bg-slate-700 flex items-center justify-center text-orange-500 font-black text-2xl group-hover:bg-orange-500 group-hover:text-white transition-colors shadow-inner">02</div>
+                    <div>
+                        <h3 class="font-bold text-orange-950 dark:text-orange-50 mb-2 text-lg tracking-wide" data-i18n="htp_step2_title">パターンに従う</h3>
+                        <p class="text-orange-800 dark:text-orange-200/80 font-medium text-sm leading-relaxed" data-i18n="htp_step2_desc">Jjaemuのニーズに合わせて優しく猫をブラッシングします。</p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center text-center space-y-4 p-6 rounded-2xl bg-orange-50/50 dark:bg-slate-800/50 border border-orange-100 dark:border-slate-600 hover:border-orange-400 dark:hover:border-orange-500 hover:bg-white dark:hover:bg-slate-800 transition-all duration-300 group shadow-sm">
+                    <div class="w-16 h-16 rounded-full bg-orange-100 dark:bg-slate-700 flex items-center justify-center text-orange-500 font-black text-2xl group-hover:bg-orange-500 group-hover:text-white transition-colors shadow-inner">03</div>
+                    <div>
+                        <h3 class="font-bold text-orange-950 dark:text-orange-50 mb-2 text-lg tracking-wide" data-i18n="htp_step3_title">障害物を避ける</h3>
+                        <p class="text-orange-800 dark:text-orange-200/80 font-medium text-sm leading-relaxed" data-i18n="htp_step3_desc">Jjaemuのリラックスを妨げる可能性のあるものに注意してください！</p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center text-center space-y-4 p-6 rounded-2xl bg-orange-50/50 dark:bg-slate-800/50 border border-orange-100 dark:border-slate-600 hover:border-orange-400 dark:hover:border-orange-500 hover:bg-white dark:hover:bg-slate-800 transition-all duration-300 group shadow-sm">
+                    <div class="w-16 h-16 rounded-full bg-orange-100 dark:bg-slate-700 flex items-center justify-center text-orange-500 font-black text-2xl group-hover:bg-orange-500 group-hover:text-white transition-colors shadow-inner">04</div>
+                    <div>
+                        <h3 class="font-bold text-orange-950 dark:text-orange-50 mb-2 text-lg tracking-wide" data-i18n="htp_step4_title">ふわふわを保つ</h3>
+                        <p class="text-orange-800 dark:text-orange-200/80 font-medium text-sm leading-relaxed" data-i18n="htp_step4_desc">上手にブラッシングするほど、Jjaemuは幸せになります。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pro Tip Box -->
+            <div class="mt-12 max-w-6xl mx-auto bg-gradient-to-r from-orange-100 to-orange-50 dark:from-slate-800 dark:to-slate-800/50 rtl:border-r-4 ltr:border-l-4 border-orange-500 dark:border-orange-600 rtl:rounded-l-2xl ltr:rounded-r-2xl p-6 shadow-sm">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                        <svg class="h-6 w-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <div class="ms-4">
+                        <h3 class="text-orange-950 dark:text-orange-50 font-black tracking-wide text-lg" data-i18n="htp_protip_title">💡 究極のASMR体験のためのプロのヒント:</h3>
+                        <p class="mt-2 text-orange-900 dark:text-orange-100 font-medium text-sm leading-relaxed" data-i18n="htp_protip_desc">急がないで！<strong>Brush Jjaemuゲーム</strong>をマスターする秘訣は、ゆっくりとリズミカルなストロークです。ゴロゴロという音をよく聞いてください。Jjaemuがイライラしているように見える場合は、ブラッシングが速すぎます。<strong>リラックスできる猫ゲーム</strong>として設計されているので、時間をかけてください！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why is it popular? -->
+        <section class="rounded-3xl p-8 md:p-12 mb-20 border-2 border-orange-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 backdrop-blur-md shadow-xl fade-in-up">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+                <div class="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[4/3] order-2 lg:order-1">
+                    <div class="absolute inset-0 bg-orange-200 dark:bg-slate-700 rounded-2xl transform -translate-x-3 translate-y-3 z-0"></div>
+                    <img src="../brush-jjaemu.png" alt="Brush Jjaemu TikTok Trend and Reddit Gameplay" class="absolute inset-0 w-full h-full rounded-2xl border-4 border-white shadow-lg object-contain bg-white dark:bg-slate-800 hover:scale-[1.02] transition-transform duration-500 z-10">
+                </div>
+                <div class="text-left space-y-6 order-1 lg:order-2">
+                    <h2 class="text-3xl md:text-4xl font-black text-orange-950 dark:text-orange-50 tracking-wide" data-i18n="why_title">なぜ<span class="text-orange-500">Brush Jjaemu</span>はそんなに人気があるのですか？</h2>
+                    <p class="text-orange-900 dark:text-orange-100 text-lg leading-relaxed font-medium" data-i18n="why_p1">この居心地の良いインディーゲームの突然の台頭は、<strong>TikTokのトレンド</strong>と人気のある<strong>Twitchストリーマー</strong>に遡ることができます。才能あるインディー開発者<strong>artbyeori</strong>による<strong>Itch.io</strong>でのシンプルなプロジェクトとして始まったものが、急速に世界的なバイラルセンセーションになりました。</p>
+                    <p class="text-orange-900 dark:text-orange-100 text-lg leading-relaxed font-medium" data-i18n="why_p2">ゲーマーも猫好きも同様に、その信じられないほど心地よい<strong>ASMR</strong>サウンドエフェクトとストレス解消のゲームプレイに惹きつけられました。ペースの速い対戦ゲームに満ちた世界で、数分間時間を取って仮想の茶トラ猫の毛づくろいをすることは、完璧な逃避を提供します。今年究極の「居心地の良いゲーム」として<strong>Reddit</strong>コミュニティ全体で広く共有されているのも不思議ではありません。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Video Gallery -->
+        <section class="mb-20 fade-in-up">
+            <h2 class="text-2xl md:text-3xl font-black text-orange-950 dark:text-orange-50 mb-10 tracking-wide text-center" data-i18n="watch_title"><span class="text-orange-500">Brush Jjaemu</span>のゲームプレイを見る</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <div class="relative overflow-hidden rounded-2xl aspect-[9/16] bg-orange-100 dark:bg-slate-700 border border-orange-200 dark:border-slate-700 shadow-xl cursor-pointer group" onclick="this.innerHTML='<iframe class=\'absolute inset-0 w-full h-full\' src=\'https://www.youtube-nocookie.com/embed/-5UXOUFa-hI?autoplay=1\' title=\'Brush Jjaemu Gameplay Video 1\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\' allowfullscreen></iframe>'">
+                    <img src="https://i.ytimg.com/vi/-5UXOUFa-hI/hqdefault.jpg" alt="Brush Jjaemu Game Playthrough Shorts - Cat Brush Game ASMR" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-14 h-14 bg-red-600/90 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(220,38,38,0.5)] group-hover:bg-red-600 transition-colors transform group-hover:scale-110 duration-300">
+                            <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-2xl aspect-[9/16] bg-orange-100 dark:bg-slate-700 border border-orange-200 dark:border-slate-700 shadow-xl cursor-pointer group" onclick="this.innerHTML='<iframe class=\'absolute inset-0 w-full h-full\' src=\'https://www.youtube-nocookie.com/embed/EL6N8YclSLQ?autoplay=1\' title=\'Brush Jjaemu Gameplay Video 2\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\' allowfullscreen></iframe>'">
+                    <img src="https://i.ytimg.com/vi/EL6N8YclSLQ/hqdefault.jpg" alt="How to play Brush Jjaemu game unblocked online" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-14 h-14 bg-red-600/90 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(220,38,38,0.5)] group-hover:bg-red-600 transition-colors transform group-hover:scale-110 duration-300">
+                            <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-2xl aspect-[9/16] bg-orange-100 dark:bg-slate-700 border border-orange-200 dark:border-slate-700 shadow-xl cursor-pointer group" onclick="this.innerHTML='<iframe class=\'absolute inset-0 w-full h-full\' src=\'https://www.youtube-nocookie.com/embed/HyeL7Cs1CRI?autoplay=1\' title=\'Brush Jjaemu Gameplay Video 3\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\' allowfullscreen></iframe>'">
+                    <img src="https://i.ytimg.com/vi/HyeL7Cs1CRI/hqdefault.jpg" alt="Relaxing Cat Grooming Game ASMR - Brush Jjaemu Itch io" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-14 h-14 bg-red-600/90 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(220,38,38,0.5)] group-hover:bg-red-600 transition-colors transform group-hover:scale-110 duration-300">
+                            <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden rounded-2xl aspect-[9/16] bg-orange-100 dark:bg-slate-700 border border-orange-200 dark:border-slate-700 shadow-xl cursor-pointer group" onclick="this.innerHTML='<iframe class=\'absolute inset-0 w-full h-full\' src=\'https://www.youtube-nocookie.com/embed/bTO9ZqDvHw0?autoplay=1\' title=\'Brush Jjaemu Gameplay Video 4\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\' allowfullscreen></iframe>'">
+                    <img src="https://i.ytimg.com/vi/bTO9ZqDvHw0/hqdefault.jpg" alt="Funny YOU DIED Moment in Brush Jjaemu Game" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-14 h-14 bg-red-600/90 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(220,38,38,0.5)] group-hover:bg-red-600 transition-colors transform group-hover:scale-110 duration-300">
+                            <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="rounded-3xl p-8 md:p-12 mb-20 border-2 border-orange-200 dark:border-slate-700 bg-white dark:bg-slate-800/80 backdrop-blur-md shadow-xl fade-in-up relative overflow-hidden">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-orange-300/20 blur-[100px] rounded-full pointer-events-none"></div>
+            <div class="text-center mb-12 relative z-10">
+                <h2 class="text-2xl md:text-3xl font-black text-orange-950 dark:text-orange-50 mb-4 tracking-wide" data-i18n="faq_title">よくある<span class="text-orange-500">質問</span></h2>
+                <p class="text-orange-800 dark:text-orange-200 font-bold" data-i18n="faq_subtitle">Brush Jjaemu Onlineのプレイについて知っておくべきことすべて</p>
+            </div>
+            <div class="space-y-4 max-w-3xl mx-auto relative z-10 faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="bg-orange-50/80 dark:bg-slate-800/80 border border-orange-200 dark:border-slate-700 rounded-2xl overflow-hidden hover:border-orange-400 dark:hover:border-orange-500 transition-all duration-300 shadow-sm faq-item">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none group rtl:text-right">
+                        <h3 class="font-black text-orange-950 dark:text-orange-50 text-lg tracking-wide group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors flex items-center pe-4">
+                            <span class="text-orange-400 me-3 text-xl opacity-70 group-hover:opacity-100 transition-opacity">Q.</span>
+                            <span data-i18n="faq_q1">Brush Jjaemu（またはBrush Jaime）とは何ですか？</span>
+                        </h3>
+                        <span class="text-orange-400 transform transition-transform duration-300 icon-arrow rtl:rotate-180">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 ps-14">
+                         <p class="text-orange-900 dark:text-orange-100 font-medium leading-relaxed" data-i18n="faq_a1">これは、artbyeoriによってItch.ioで作成されたバイラルなインディーゲームです。「Brush Jjeamu」、「Brush Jaime」、「game chải lông mèo」のいずれで検索しても、愛らしい茶トラ猫の毛づくろいをするという同じリラックスした体験を指します。</p>
+                     </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-orange-50/80 dark:bg-slate-800/80 border border-orange-200 dark:border-slate-700 rounded-2xl overflow-hidden hover:border-orange-400 dark:hover:border-orange-500 transition-all duration-300 shadow-sm faq-item">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none group rtl:text-right">
+                        <h3 class="font-black text-orange-950 dark:text-orange-50 text-lg tracking-wide group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors flex items-center pe-4">
+                            <span class="text-orange-400 me-3 text-xl opacity-70 group-hover:opacity-100 transition-opacity">Q.</span>
+                            <span data-i18n="faq_q2">Brush Jjaemuで猫が噛みつくのはなぜですか？</span>
+                        </h3>
+                        <span class="text-orange-400 transform transition-transform duration-300 icon-arrow rtl:rotate-180">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 ps-14">
+                        <p class="text-orange-900 dark:text-orange-100 font-medium leading-relaxed" data-i18n="faq_a2">コアとなるゲームプレイの仕組みは「だるまさんが転んだ」に似ています。Jjaemuが目を開けたり、イライラしているように見えたりした場合は、すぐにブラッシングを停止する必要があります。猫が警戒している間にブラッシングを続けると、「YOU DIED」画面がトリガーされます！</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-orange-50/80 dark:bg-slate-800/80 border border-orange-200 dark:border-slate-700 rounded-2xl overflow-hidden hover:border-orange-400 dark:hover:border-orange-500 transition-all duration-300 shadow-sm faq-item">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none group rtl:text-right">
+                        <h3 class="font-black text-orange-950 dark:text-orange-50 text-lg tracking-wide group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors flex items-center pe-4">
+                            <span class="text-orange-400 me-3 text-xl opacity-70 group-hover:opacity-100 transition-opacity">Q.</span>
+                            <span data-i18n="faq_q3">Brush Jjaemuは学校でブロック解除されていますか？</span>
+                        </h3>
+                        <span class="text-orange-400 transform transition-transform duration-300 icon-arrow rtl:rotate-180">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 ps-14">
+                        <p class="text-orange-900 dark:text-orange-100 font-medium leading-relaxed" data-i18n="faq_a3">はい！この特定のウェブサイトバージョンは、学校や職場でブロック解除されるように最適化されています。ダイレクトHTML5 iframeを使用し、一般的なネットワークフィルターをバイパスするため、自由にプレイできます。</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-orange-50/80 dark:bg-slate-800/80 border border-orange-200 dark:border-slate-700 rounded-2xl overflow-hidden hover:border-orange-400 dark:hover:border-orange-500 transition-all duration-300 shadow-sm faq-item">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none group rtl:text-right">
+                        <h3 class="font-black text-orange-950 dark:text-orange-50 text-lg tracking-wide group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors flex items-center pe-4">
+                            <span class="text-orange-400 me-3 text-xl opacity-70 group-hover:opacity-100 transition-opacity">Q.</span>
+                            <span data-i18n="faq_q4">猫の毛づくろいゲームで高得点を取るにはどうすればよいですか？</span>
+                        </h3>
+                        <span class="text-orange-400 transform transition-transform duration-300 icon-arrow rtl:rotate-180">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 ps-14">
+                        <p class="text-orange-900 dark:text-orange-100 font-medium leading-relaxed" data-i18n="faq_a4">忍耐が鍵です！高得点の秘訣は、ゆっくりとリズミカルなストロークをすることです。ASMRのゴロゴロ音を聞いてください。彼らがあなたのリズムを導きます。音楽が変わるか、猫があなたを見たときは、すぐに止めてください。</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="bg-orange-50/80 dark:bg-slate-800/80 border border-orange-200 dark:border-slate-700 rounded-2xl overflow-hidden hover:border-orange-400 dark:hover:border-orange-500 transition-all duration-300 shadow-sm faq-item">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none group rtl:text-right">
+                        <h3 class="font-black text-orange-950 dark:text-orange-50 text-lg tracking-wide group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors flex items-center pe-4">
+                            <span class="text-orange-400 me-3 text-xl opacity-70 group-hover:opacity-100 transition-opacity">Q.</span>
+                            <span data-i18n="faq_q5">Brush Jjaemu Itch ioバージョンはどこで見つけることができますか？</span>
+                        </h3>
+                        <span class="text-orange-400 transform transition-transform duration-300 icon-arrow rtl:rotate-180">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 ps-14">
+                         <p class="text-orange-900 dark:text-orange-100 font-medium leading-relaxed" data-i18n="faq_a5">元のゲームはItch.ioのartbyeoriによってホストされています。ただし、当社のサイトでは便利な全画面Webバージョンを提供しているため、別のページに移動することなく、まったく同じゲームを直接プレイできます。</p>
+                     </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="bg-orange-50/80 dark:bg-slate-800/80 border border-orange-200 dark:border-slate-700 rounded-2xl overflow-hidden hover:border-orange-400 dark:hover:border-orange-500 transition-all duration-300 shadow-sm faq-item">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none group rtl:text-right">
+                        <h3 class="font-black text-orange-950 dark:text-orange-50 text-lg tracking-wide group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors flex items-center pe-4">
+                            <span class="text-orange-400 me-3 text-xl opacity-70 group-hover:opacity-100 transition-opacity">Q.</span>
+                            <span data-i18n="faq_q6">ダウンロードする必要がありますか？</span>
+                        </h3>
+                        <span class="text-orange-400 transform transition-transform duration-300 icon-arrow rtl:rotate-180">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 ps-14">
+                        <p class="text-orange-900 dark:text-orange-100 font-medium leading-relaxed" data-i18n="faq_a6">ダウンロードは必要ありません。デスクトップとモバイルの両方で、Webブラウザ（Chrome、Safari、Edge、Firefox）から直接無料でBrush Jjaemuをオンラインでプレイできます。</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="bg-orange-50/80 dark:bg-slate-800/80 border border-orange-200 dark:border-slate-700 rounded-2xl overflow-hidden hover:border-orange-400 dark:hover:border-orange-500 transition-all duration-300 shadow-sm faq-item">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none group rtl:text-right">
+                        <h3 class="font-black text-orange-950 dark:text-orange-50 text-lg tracking-wide group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors flex items-center pe-4">
+                            <span class="text-orange-400 me-3 text-xl opacity-70 group-hover:opacity-100 transition-opacity">Q.</span>
+                            <span data-i18n="faq_q7">携帯電話でBrush Jjaemuをプレイできますか？</span>
+                        </h3>
+                        <span class="text-orange-400 transform transition-transform duration-300 icon-arrow rtl:rotate-180">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 ps-14">
+                        <p class="text-orange-900 dark:text-orange-100 font-medium leading-relaxed" data-i18n="faq_a7">はい！iOSまたはAndroidの公式アプリはありませんが、このHTML5ブラウザバージョンは完全に応答性が高く、タッチに最適化されています。携帯電話の画面でJjaemuのブラッシングを完璧に楽しむことができます。</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="bg-orange-50/80 dark:bg-slate-800/80 border border-orange-200 dark:border-slate-700 rounded-2xl overflow-hidden hover:border-orange-400 dark:hover:border-orange-500 transition-all duration-300 shadow-sm faq-item">
+                    <button class="w-full text-left p-6 flex justify-between items-center focus:outline-none group rtl:text-right">
+                        <h3 class="font-black text-orange-950 dark:text-orange-50 text-lg tracking-wide group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors flex items-center pe-4">
+                            <span class="text-orange-400 me-3 text-xl opacity-70 group-hover:opacity-100 transition-opacity">Q.</span>
+                            <span data-i18n="faq_q8">「YOU DIED」画面とは何ですか？</span>
+                        </h3>
+                        <span class="text-orange-400 transform transition-transform duration-300 icon-arrow rtl:rotate-180">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </span>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 ps-14">
+                        <p class="text-orange-900 dark:text-orange-100 font-medium leading-relaxed" data-i18n="faq_a8">リラックスしていない（目を開けている）ときに猫をブラッシングすると、猫はあなたを「攻撃」し、面白いジャンプスケアとDark Soulsにインスパイアされた古典的な「YOU DIED」画面をトリガーします。それはゲームオーバーを意味し、再起動する必要があります！</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explore More Games -->
+        <section class="mb-12 fade-in-up">
+            <div class="flex flex-col items-center justify-center mb-10">
+                <h2 class="text-2xl md:text-3xl font-black text-orange-950 dark:text-orange-50 tracking-wide text-center mb-6" data-i18n="explore_title"><span class="text-orange-500">もっと癒やされるゲーム</span>を探す</h2>
+                
+                <!-- Coming Soon Empty State -->
+                <div class="w-full max-w-4xl mx-auto bg-orange-50/50 dark:bg-slate-800/50 border border-orange-200 dark:border-slate-700 border-dashed rounded-3xl p-12 text-center shadow-sm">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-orange-100 dark:bg-slate-700 text-orange-400 mb-4 animate-pulse">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-black text-orange-900 dark:text-orange-100 tracking-wider mb-2" data-i18n="explore_coming_soon">その他のゲームも近日公開予定...</h3>
+                    <p class="text-orange-800 dark:text-orange-200/60 font-medium" data-i18n="explore_desc">現在、最高のリラックスゲームとASMRゲームを厳選しています。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-orange-950 dark:bg-slate-950 text-orange-100 dark:text-slate-300 py-16 px-4 mt-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6bTIwIDIwYzAtMTEuMDQ2IDguOTU0LTIwIDIwLTIwczIwIDguOTU0IDIwIDIwTDAlMjB6IiBmaWxsPSIjZmI5MjNjIiBmaWxsLW9wYWNpdHk9Ii4wNSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+')] opacity-20"></div>
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <!-- Brand & Description -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="../logo.png" alt="Brush Jjaemu Game Logo - Cat Game" class="h-8 w-8 rounded-lg shadow-md object-cover">
+                        <span class="text-xl font-black text-white tracking-wide">Brush Jjaemu</span>
+                    </div>
+                    <p class="text-orange-200/80 dark:text-slate-400 text-sm leading-relaxed" data-i18n="footer_desc">バイラルなBrush Jjaemu (artbyeori) 猫ゲームをオンラインでプレイ。ダウンロード不要で全画面、ブロック解除された体験を手に入れましょう。猫好きのための究極のリラックスブラウザゲーム。</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-black uppercase tracking-widest text-sm mb-6" data-i18n="footer_links_title">クイックリンク</h4>
+                    <ul class="space-y-3 text-sm text-orange-200/80 dark:text-slate-400 font-medium">
+                        <li><a href="#about" class="hover:text-orange-400 dark:hover:text-orange-500 transition-colors" data-i18n="nav_about">概要</a></li>
+                        <li><a href="#how-to-play" class="hover:text-orange-400 dark:hover:text-orange-500 transition-colors" data-i18n="nav_how_to_play">遊び方</a></li>
+                        <li><a href="#faq" class="hover:text-orange-400 dark:hover:text-orange-500 transition-colors" data-i18n="nav_faq">よくある質問</a></li>
+                    </ul>
+                </div>
+
+                <!-- Disclaimer & Credits -->
+                <div>
+                    <h4 class="text-white font-black uppercase tracking-widest text-sm mb-6" data-i18n="footer_disclaimer_title">免責事項</h4>
+                    <p class="text-orange-200/60 dark:text-slate-500 text-xs leading-relaxed mb-4" data-i18n="footer_disclaimer_desc">これは、ゲームへのブロック解除されたアクセスを提供するために作成された非公式のファンサイトです。すべてのアセット、キャラクター、および元のゲームコードは、それぞれの所有者に帰属します。</p>
+                    <div class="bg-orange-900/50 dark:bg-slate-900/50 p-4 rounded-xl border border-orange-800 dark:border-slate-800">
+                        <p class="text-orange-200/60 dark:text-slate-400 font-medium text-sm" data-i18n="footer_credit">オリジナルゲームは<span class="text-orange-400 dark:text-orange-500">artbyeori</span>によって作成されました。Itch.ioでの公式リリースをサポートしてください！</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-orange-800/50 dark:border-slate-800/50 pt-8 flex flex-col md:flex-row items-center justify-between">
+                <p class="text-orange-500/60 dark:text-slate-500 text-xs font-bold mb-4 md:mb-0" data-i18n="footer_copyright">© 2026 BrushJjaemu.fun - ファンサイト。全著作権所有。</p>
+                
+                <!-- SEO Hidden Text (Read More) -->
+                <div class="w-full md:w-auto text-center md:text-right">
+                    <details class="group relative inline-block text-left">
+                        <summary class="text-xs text-orange-500/40 dark:text-slate-600 hover:text-orange-400 dark:hover:text-slate-400 cursor-pointer transition-colors list-none outline-none font-bold uppercase tracking-wider" data-i18n="footer_seo_summary">このページについて ▼</summary>
+                        <div class="absolute bottom-full right-0 mb-2 w-72 md:w-96 p-4 bg-orange-900 dark:bg-slate-900 border border-orange-800 dark:border-slate-800 rounded-xl shadow-2xl text-xs text-orange-200/70 dark:text-slate-400 text-left leading-relaxed opacity-0 invisible group-open:opacity-100 group-open:visible transition-all" data-i18n="footer_seo_desc">Brush Jjaemuゲームをオンラインでブロック解除して全画面でプレイ。artbyeoriによる究極の猫の毛づくろいゲーム（game chải lông mèo）。猫をブラッシングし、Jjaemuを幸せに保ち、ブラウザで直接リラックスできるASMR体験を楽しむ方法を見つけてください。</div>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Game",
+                "name": "Brush Jjaemu",
+                "url": "https://brushjjaemu.fun",
+                "description": "Play the viral Brush Jjaemu (artbyeori) cat game online. Get the full screen, unblocked experience with no download.",
+                "genre": "Casual",
+                "gamePlatform": "Web Browser",
+                "operatingSystem": "Cross Platform",
+                "applicationCategory": "Game",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "USD"
+                },
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.9",
+                    "ratingCount": "12500"
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Is Brush Jjaemu unblocked for school?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes! This version is optimized to be unblocked at school or work. It uses an HTML5 iframe for maximum compatibility."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Do I need to download it?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No. You can play Brush Jjaemu online free directly in your browser (Chrome, Safari, Edge) with no download required."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Where did the game originate?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "It was originally released on Itch.io by artbyeori. We provide a full-screen web version for easier access."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Where can I find the Brush Jjaemu Itch io version?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "The original game is hosted by artbyeori on Itch.io. Our unblocked version allows you to play the exact same cat game directly in your browser without any downloads."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is there a mobile app for the Brush Cat Game?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Currently, there is no official app on iOS or Android. However, this HTML5 browser version is fully optimized for mobile devices, so you can enjoy brushing Jjaemu on your phone or tablet."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Why is it called the \"cat brush game\"?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Because of its simple, satisfying mechanics—it's often called \"game chải lông mèo\" or simply the \"brush cat game\" by its global fan base on Reddit and TikTok."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
+
+    <!-- Supabase JS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <!-- Interactive JavaScript -->
+    <script>
+        // Supabase Initialization
+        const supabaseUrl = 'https://infwtpxlgpqmcfownelz.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImluZnd0cHhsZ3BxbWNmb3duZWx6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY3MzkxNDgsImV4cCI6MjA5MjMxNTE0OH0.t3DH4_TSugrJ9qjNuwNX0W00UWXDcx09FLDQo866otk';
+        const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Add parallax effect to floating elements
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const floatingElements = document.querySelectorAll('.float-animation');
+                floatingElements.forEach((element, index) => {
+                    const speed = 0.1 + (index * 0.05);
+                    element.style.transform = `translateY(${scrolled * speed}px)`;
+                });
+            });
+
+            // Add typing effect to main title
+            const title = document.querySelector('h1');
+            if (title) {
+                const text = title.textContent;
+                title.textContent = '';
+                let i = 0;
+                const typeEffect = setInterval(() => {
+                    if (i < text.length) {
+                        title.textContent += text.charAt(i);
+                        i++;
+                    } else {
+                        clearInterval(typeEffect);
+                    }
+                }, 100);
+            }
+
+            // Add counter animation
+            const startCounter = (element, target) => {
+                let current = 0;
+                const increment = target / 100;
+                const timer = setInterval(() => {
+                    current += increment;
+                    element.textContent = Math.floor(current);
+                    if (current >= target) {
+                        element.textContent = target;
+                        clearInterval(timer);
+                    }
+                }, 20);
+            };
+
+            // Interactive hover effects for feature cards
+            const featureCards = document.querySelectorAll('.card-hover');
+            featureCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+
+        // Game loading simulation
+        function startGame() {
+            const loadingElement = document.getElementById('game-loading');
+            const iframe = document.getElementById('game-iframe');
+            
+            // Prevent multiple clicks
+            loadingElement.onclick = null;
+            loadingElement.style.cursor = 'default';
+            
+            // Focus iframe to enable keyboard/mouse controls immediately
+            iframe.focus();
+            
+            // Hide mask immediately (fade out)
+            loadingElement.style.opacity = '0';
+            setTimeout(() => {
+                loadingElement.style.display = 'none';
+            }, 300);
+        }
+
+        // Remove the automatic call
+        // simulateGameLoading();
+
+        // Player Notes Logic (Supabase)
+        document.addEventListener('DOMContentLoaded', () => {
+            const stars = document.querySelectorAll('#star-rating svg');
+            let currentRating = 5; // Default rating
+            
+            // Star hover and click logic
+            stars.forEach(star => {
+                star.addEventListener('mouseenter', (e) => {
+                    const value = parseInt(e.currentTarget.getAttribute('data-value'));
+                    updateStars(value, true);
+                });
+                
+                star.addEventListener('mouseleave', () => {
+                    updateStars(currentRating, false);
+                });
+                
+                star.addEventListener('click', (e) => {
+                    currentRating = parseInt(e.currentTarget.getAttribute('data-value'));
+                    updateStars(currentRating, false);
+                });
+            });
+            
+            function updateStars(value, isHover) {
+                stars.forEach(star => {
+                    const starValue = parseInt(star.getAttribute('data-value'));
+                    if (starValue <= value) {
+                        star.classList.remove('text-orange-300', 'star-empty');
+                        star.classList.add('text-yellow-400', 'star-filled');
+                    } else {
+                        star.classList.remove('text-yellow-400', 'star-filled');
+                        star.classList.add('text-orange-300', 'star-empty');
+                    }
+                });
+            }
+            
+            // Initialize stars
+            updateStars(currentRating, false);
+
+            // Post Note Logic
+            const postBtn = document.getElementById('post-note-btn');
+            const nameInput = document.getElementById('note-name');
+            const contentInput = document.getElementById('note-content');
+            const commentsContainer = document.getElementById('comments-list');
+            const loadingState = document.getElementById('comments-loading');
+            const emptyState = document.getElementById('comments-empty');
+            const averageRatingEl = document.getElementById('average-rating');
+            const totalNotesEl = document.getElementById('total-notes');
+            
+            // Load saved comments from Supabase
+            loadComments();
+
+            postBtn.addEventListener('click', async () => {
+                const name = nameInput.value.trim() || 'Anonymous Fluff';
+                const content = contentInput.value.trim();
+                
+                if (!content) {
+                    alert('Please enter your comment before posting!');
+                    return;
+                }
+
+                // Change button state
+                const originalText = postBtn.textContent;
+                postBtn.textContent = 'Posting...';
+                postBtn.disabled = true;
+                postBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                
+                const { data, error } = await supabaseClient
+                    .from('comments')
+                    .insert([
+                        { name: name, content: content, rating: currentRating }
+                    ])
+                    .select();
+                
+                postBtn.disabled = false;
+                postBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+
+                if (error) {
+                    console.error('Error inserting comment:', error);
+                    alert('Failed to post comment. Please check database permissions (RLS) or try again.');
+                    postBtn.textContent = originalText;
+                    return;
+                }
+                
+                // Add to UI
+                if (data && data.length > 0) {
+                    const insertedComment = data[0];
+                    const dateStr = new Date(insertedComment.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).toUpperCase();
+                    
+                    const newCommentObj = {
+                        name: insertedComment.name,
+                        rating: insertedComment.rating,
+                        content: insertedComment.content,
+                        date: dateStr
+                    };
+                    addCommentToUI(newCommentObj, true, true);
+                }
+                
+                // Reset form
+                nameInput.value = '';
+                contentInput.value = '';
+                currentRating = 5;
+                updateStars(currentRating, false);
+                
+                // Success visual feedback
+                postBtn.textContent = 'Posted!';
+                postBtn.classList.add('bg-green-500', 'text-white');
+                postBtn.classList.remove('bg-orange-100 dark:bg-slate-700', 'text-orange-600');
+                
+                setTimeout(() => {
+                    postBtn.textContent = originalText;
+                    postBtn.classList.remove('bg-green-500', 'text-white');
+                    postBtn.classList.add('bg-orange-100 dark:bg-slate-700', 'text-orange-600');
+                }, 2000);
+            });
+            
+            function addCommentToUI(comment, animate = false, prepend = false) {
+                let starsHtml = '';
+                for (let i = 1; i <= 5; i++) {
+                    if (i <= comment.rating) {
+                        starsHtml += '★ ';
+                    } else {
+                        starsHtml += '☆ ';
+                    }
+                }
+                
+                const commentEl = document.createElement('div');
+                commentEl.className = `border-b border-orange-100 dark:border-slate-600 pb-4 ${animate ? 'animate-pulse' : ''}`;
+                commentEl.innerHTML = `
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="font-bold text-orange-950 dark:text-orange-50 text-sm">${comment.name}</span>
+                        <div class="flex text-yellow-400 text-xs">${starsHtml.trim()}</div>
+                    </div>
+                    <p class="text-orange-800 dark:text-orange-200/80 text-sm font-medium mb-1">${comment.content}</p>
+                    <span class="text-orange-500/50 text-[10px] font-bold uppercase tracking-wider">${comment.date}</span>
+                `;
+                
+                if (prepend) {
+                    // insert after the loading/empty states
+                    let insertBeforeElement = commentsContainer.firstElementChild;
+                    while (insertBeforeElement && (insertBeforeElement.id === 'comments-loading' || insertBeforeElement.id === 'comments-empty')) {
+                        insertBeforeElement = insertBeforeElement.nextElementSibling;
+                    }
+                    if (insertBeforeElement) {
+                        commentsContainer.insertBefore(commentEl, insertBeforeElement);
+                    } else {
+                        commentsContainer.appendChild(commentEl);
+                    }
+                } else {
+                    commentsContainer.appendChild(commentEl);
+                }
+                
+                // Hide empty state if visible
+                if (emptyState.style.display !== 'none') {
+                    emptyState.style.display = 'none';
+                }
+            }
+            
+            function updateStats(data) {
+                if (!data || data.length === 0) {
+                    averageRatingEl.textContent = '0.0 / 5';
+                    totalNotesEl.textContent = '(0 notes)';
+                    return;
+                }
+                
+                const total = data.length;
+                const sum = data.reduce((acc, curr) => acc + (curr.rating || 5), 0);
+                const avg = (sum / total).toFixed(1);
+                
+                averageRatingEl.textContent = `${avg} / 5`;
+                totalNotesEl.textContent = `(${total} note${total > 1 ? 's' : ''})`;
+            }
+
+            async function loadComments() {
+                try {
+                    const { data, error } = await supabaseClient
+                        .from('comments')
+                        .select('*')
+                        .order('created_at', { ascending: false })
+                        .limit(50);
+                        
+                    if (error) {
+                        console.error('Error fetching comments:', error);
+                        loadingState.style.display = 'none';
+                        return;
+                    }
+                    
+                    loadingState.style.display = 'none';
+                    
+                    if (data && data.length > 0) {
+                        // We have real data
+                        emptyState.style.display = 'none';
+                        updateStats(data);
+                        
+                        data.forEach(comment => {
+                            const dateStr = new Date(comment.created_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }).toUpperCase();
+                            addCommentToUI({
+                                name: comment.name,
+                                rating: comment.rating,
+                                content: comment.content,
+                                date: dateStr
+                            }, false, false);
+                        });
+                    } else {
+                        // Empty database
+                        emptyState.style.display = 'flex';
+                        updateStats([]);
+                    }
+                } catch (e) {
+                    console.error('Network or Supabase error:', e);
+                    loadingState.style.display = 'none';
+                }
+            }
+        });
+
+        // Theme toggle logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // Check initial theme
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            darkIcon.classList.remove('hidden');
+            lightIcon.classList.add('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            darkIcon.classList.add('hidden');
+            lightIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                darkIcon.classList.add('hidden');
+                lightIcon.classList.remove('hidden');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                darkIcon.classList.remove('hidden');
+                lightIcon.classList.add('hidden');
+            }
+        });
+
+        // Language dropdown logic
+        const langToggleBtn = document.getElementById('lang-toggle');
+        const langDropdown = document.getElementById('lang-dropdown');
+        
+        if (langToggleBtn && langDropdown) {
+            langToggleBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                langDropdown.classList.toggle('hidden');
+            });
+            
+            document.addEventListener('click', (e) => {
+                if (!langToggleBtn.contains(e.target) && !langDropdown.contains(e.target)) {
+                    langDropdown.classList.add('hidden');
+                }
+            });
+        }
+
+        // --- i18n Logic ---
+        </script>
+<!-- FAQ Script -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const faqItems = document.querySelectorAll('.faq-item button');
+                faqItems.forEach(item => {
+                    item.addEventListener('click', () => {
+                        const content = item.nextElementSibling;
+                        const icon = item.querySelector('.icon-arrow');
+                        
+                        // Toggle current item
+                        if (content.classList.contains('hidden')) {
+                            content.classList.remove('hidden');
+                            icon.classList.add('rotate-180');
+                        } else {
+                            content.classList.add('hidden');
+                            icon.classList.remove('rotate-180');
+                        }
+                    });
+                });
+            });
+        </script>
+    
+</body></html>
