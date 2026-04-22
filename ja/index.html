@@ -1,11 +1,21 @@
 <!DOCTYPE html><html lang="ja"><head>
+    <!-- Google tag (gtag.js) -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-K9M0GZ2BNZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-K9M0GZ2BNZ');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="baidu-site-verification" content="codeva-VDo1QIHgcP">
     <title>Brush Jjaemu オンラインゲーム - 全画面で遊べる癒やし系猫の毛づくろいゲーム</title>
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/logo.png">
-    <link rel="apple-touch-icon" href="/logo.png">
+    <link rel="icon" type="image/webp" href="../logo.webp">
+    <link rel="apple-touch-icon" href="../logo.webp">
     
     <meta name="description" content="Brush Jjaemuゲームをオンラインでブロック解除して全画面でプレイ。artbyeoriによる究極の猫の毛づくろいゲーム（game chải lông mèo）。猫をブラッシングし、Jjaemuを幸せに保ち、ブラウザで直接リラックスできるASMR体験を楽しむ方法を見つけてください。">
     <meta name="keywords" content="Brush Jjaemu, cat brush game, Brush Jjaemu unblocked, artbyeori, play cat game online">
@@ -237,7 +247,7 @@
             <div class="flex items-center justify-between h-16">
                 <!-- Logo and Name -->
                 <div class="flex items-center space-x-3">
-                    <img src="../logo.png" alt="Brush Jjaemu Game Logo - Play Cat Brush Game" class="h-10 w-10 rounded-lg shadow-[0_0_10px_rgba(249,115,22,0.3)] object-cover">
+                    <img src="../logo.webp" alt="Brush Jjaemu Game Logo - Play Cat Brush Game" class="h-10 w-10 rounded-lg shadow-[0_0_10px_rgba(249,115,22,0.3)] object-cover">
                     <span class="text-xl font-extrabold text-orange-950 dark:text-orange-50 tracking-wide">Brush Jjaemu</span>
                 </div>
                 
@@ -314,18 +324,18 @@
                 <div class="grid lg:grid-cols-4 gap-6 mb-4">
                     <!-- Game Area -->
                     <div class="lg:col-span-3 game-container p-2 md:p-4">
-                        <div class="relative w-full group overflow-hidden rounded-2xl" style="padding-bottom: 65%;">
-                            <!-- Game Loading Overlay / Start Mask -->
-                            <div id="game-loading" class="absolute inset-0 flex flex-col items-center justify-center bg-black rounded-2xl z-20 transition-opacity duration-300 cursor-pointer" onclick="startGame()">
-                                <div class="text-center">
-                                    <img src="../logo.png" alt="Brush Jjaemu Unblocked Game - Cat Grooming ASMR" class="w-24 h-24 mx-auto mb-4 rounded-2xl shadow-lg hover:scale-105 transition-transform duration-300">
-                                    <div class="inline-flex items-center justify-center px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-black rounded-full shadow-[0_0_15px_rgba(249,115,22,0.4)] transition-all">
+                        <div class="relative w-full group overflow-hidden rounded-2xl aspect-[9/16] sm:aspect-[4/3] lg:aspect-[16/10]">
+                            <!-- Game Loading Overlay / Start Mask (pointer-events-none allows clicks to pass through) -->
+                            <div id="game-loading" class="absolute inset-0 flex flex-col items-center justify-center bg-black rounded-2xl z-20 transition-opacity duration-500 pointer-events-none">
+                                <div class="text-center pointer-events-none">
+                                    <img src="../logo.webp" alt="Brush Jjaemu Unblocked Game - Cat Grooming ASMR" class="w-24 h-24 mx-auto mb-4 rounded-2xl shadow-lg animate-pulse">
+                                    <div class="inline-flex items-center justify-center px-6 py-3 bg-orange-500 text-white font-black rounded-full shadow-[0_0_15px_rgba(249,115,22,0.4)]">
                                         <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
-                                        Click to Start
+                                        Click to Play
                                     </div>
                                 </div>
                             </div>
-                            <iframe id="game-iframe" src="https://pub-4ca9553e3b5141e2b08c8798afcf2641.r2.dev/game/brush-jjaemu/index.html" class="absolute top-0 left-0 w-full h-full game-iframe border-0 opacity-100 bg-black" allowfullscreen="true" scrolling="no" webkitallowfullscreen="true" mozallowfullscreen="true" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="autoplay; fullscreen; keyboard-attach" loading="lazy" title="Brush Jjaemu Game">
+                            <iframe id="game-iframe" src="https://pub-4ca9553e3b5141e2b08c8798afcf2641.r2.dev/game/brush-jjaemu/index.html" class="absolute top-0 left-0 w-full h-full game-iframe border-0 opacity-100 bg-black" scrolling="no" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" allow="autoplay; fullscreen" title="Brush Jjaemu Game">
                             </iframe>
                             <div class="absolute bottom-4 right-4 z-30 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
                                 <a href="#how-to-play" class="bg-white dark:bg-slate-800/90 hover:bg-orange-100 dark:hover:bg-slate-600 dark:bg-slate-700 border border-orange-300 dark:border-slate-600 hover:border-orange-500 text-orange-600 hover:text-orange-700 w-10 h-10 rounded-xl backdrop-blur-md transition-all flex items-center justify-center shadow-lg" title="Help / Guide">
@@ -335,8 +345,8 @@
                                     <span class="text-lg">⛶</span>
                                 </button>
                             </div>
-                            <!-- Social Share Bar (In-Game) -->
-                            <div class="absolute top-4 right-4 z-30 flex flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <!-- Social Share Bar (In-Game, Hidden on Mobile) -->
+                            <div class="hidden sm:flex absolute top-4 right-4 z-30 flex-col space-y-2 opacity-0 group-hover:opacity-100 transition-opacity">
                                 <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fbrushjjaemu.fun&amp;text=I'm%20trying%20to%20keep%20Jjaemu%20fluffy!%20%F0%9F%90%B1%20Play%20the%20relaxing%20Brush%20Jjaemu%20game%20unblocked%20and%20free%20here%3A" target="_blank" rel="noopener noreferrer" class="bg-black/40 hover:bg-[#1DA1F2] text-white p-2 rounded-full backdrop-blur-sm transition-colors shadow-lg" title="Share on X (Twitter)">
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 5.961h-1.92z"></path></svg>
                                 </a>
@@ -347,6 +357,20 @@
                                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1.895-6.732c-.11-.11-.295-.11-.406 0l-1.077 1.078a.286.286 0 0 1-.406 0 .288.288 0 0 1 0-.406l1.077-1.078c.335-.335.88-.335 1.216 0l1.078 1.078a.288.288 0 0 1 0 .406.286.286 0 0 1-.406 0l-1.076-1.078zM12 12.868c-1.87 0-3.385.945-3.385 2.11 0 1.165 1.515 2.11 3.385 2.11 1.87 0 3.386-.945 3.386-2.11 0-1.165-1.516-2.11-3.386-2.11zm0 3.42c-1.144 0-2.072-.587-2.072-1.31 0-.723.928-1.31 2.072-1.31 1.145 0 2.073.587 2.073 1.31 0 .723-.928 1.31-2.073 1.31zM9.54 10.98c.67 0 1.214-.545 1.214-1.215 0-.67-.544-1.215-1.215-1.215-.67 0-1.214.545-1.214 1.215 0 .67.544 1.215 1.214 1.215zm4.92 0c.67 0 1.214-.545 1.214-1.215 0-.67-.544-1.215-1.215-1.215-.67 0-1.214.545-1.214 1.215 0 .67.544 1.215 1.214 1.215zm-.168-3.414l1.248-2.613a.288.288 0 0 1 .386-.118l1.455.836a2.03 2.03 0 0 1 2.825 2.81 2.03 2.03 0 0 1-2.824-2.81l-1.173-.674-.98 2.052a7.35 7.35 0 0 1 3.01 4.54h.873a.287.287 0 0 1 .288.288v1.724a.288.288 0 0 1-.288.288h-1.264c-.495 2.585-3.056 4.52-6.103 4.52-3.048 0-5.61-1.935-6.104-4.52H4.288a.288.288 0 0 1-.288-.288v-1.724a.288.288 0 0 1 .288-.288h.873a7.35 7.35 0 0 1 3.01-4.54l-.98-2.052-1.173.674a2.03 2.03 0 0 1-2.825 2.81 2.03 2.03 0 0 1 2.825-2.81l1.454-.836a.288.288 0 0 1 .386.118l1.248 2.613a7.31 7.31 0 0 1 5.188 0z"></path></svg>
                                 </a>
                             </div>
+                        </div>
+                        
+                        <!-- Social Share Bar (Mobile Only, Below Game) -->
+                        <div class="flex sm:hidden justify-center items-center space-x-4 mt-4 pt-2 border-t border-orange-200 dark:border-slate-700/50">
+                            <span class="text-xs font-bold text-orange-400 uppercase tracking-widest">Share:</span>
+                            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fbrushjjaemu.fun&amp;text=I'm%20trying%20to%20keep%20Jjaemu%20fluffy!%20%F0%9F%90%B1%20Play%20the%20relaxing%20Brush%20Jjaemu%20game%20unblocked%20and%20free%20here%3A" target="_blank" rel="noopener noreferrer" class="bg-[#1DA1F2]/10 hover:bg-[#1DA1F2] text-[#1DA1F2] hover:text-white p-2.5 rounded-full transition-colors" title="Share on X (Twitter)">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 5.961h-1.92z"></path></svg>
+                            </a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbrushjjaemu.fun" target="_blank" rel="noopener noreferrer" class="bg-[#1877F2]/10 hover:bg-[#1877F2] text-[#1877F2] hover:text-white p-2.5 rounded-full transition-colors" title="Share on Facebook">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 0 1 1-1h3v-4h-3a5 5 0 0 0-5 5v2.01h-2l-.396 3.98h2.396v8.01Z"></path></svg>
+                            </a>
+                            <a href="https://reddit.com/submit?url=https%3A%2F%2Fbrushjjaemu.fun&amp;title=Play%20the%20relaxing%20Brush%20Jjaemu%20cat%20game%20unblocked!" target="_blank" rel="noopener noreferrer" class="bg-[#FF4500]/10 hover:bg-[#FF4500] text-[#FF4500] hover:text-white p-2.5 rounded-full transition-colors" title="Share on Reddit">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1.895-6.732c-.11-.11-.295-.11-.406 0l-1.077 1.078a.286.286 0 0 1-.406 0 .288.288 0 0 1 0-.406l1.077-1.078c.335-.335.88-.335 1.216 0l1.078 1.078a.288.288 0 0 1 0 .406.286.286 0 0 1-.406 0l-1.076-1.078zM12 12.868c-1.87 0-3.385.945-3.385 2.11 0 1.165 1.515 2.11 3.385 2.11 1.87 0 3.386-.945 3.386-2.11 0-1.165-1.516-2.11-3.386-2.11zm0 3.42c-1.144 0-2.072-.587-2.072-1.31 0-.723.928-1.31 2.072-1.31 1.145 0 2.073.587 2.073 1.31 0 .723-.928 1.31-2.073 1.31zM9.54 10.98c.67 0 1.214-.545 1.214-1.215 0-.67-.544-1.215-1.215-1.215-.67 0-1.214.545-1.214 1.215 0 .67.544 1.215 1.214 1.215zm4.92 0c.67 0 1.214-.545 1.214-1.215 0-.67-.544-1.215-1.215-1.215-.67 0-1.214.545-1.214 1.215 0 .67.544 1.215 1.214 1.215zm-.168-3.414l1.248-2.613a.288.288 0 0 1 .386-.118l1.455.836a2.03 2.03 0 0 1 2.825 2.81 2.03 2.03 0 0 1-2.824-2.81l-1.173-.674-.98 2.052a7.35 7.35 0 0 1 3.01 4.54h.873a.287.287 0 0 1 .288.288v1.724a.288.288 0 0 1-.288.288h-1.264c-.495 2.585-3.056 4.52-6.103 4.52-3.048 0-5.61-1.935-6.104-4.52H4.288a.288.288 0 0 1-.288-.288v-1.724a.288.288 0 0 1 .288-.288h.873a7.35 7.35 0 0 1 3.01-4.54l-.98-2.052-1.173.674a2.03 2.03 0 0 1-2.825 2.81 2.03 2.03 0 0 1 2.825-2.81l1.454-.836a.288.288 0 0 1 .386.118l1.248 2.613a7.31 7.31 0 0 1 5.188 0z"></path></svg>
+                            </a>
                         </div>
                     </div>
 
@@ -422,7 +446,7 @@
                     </div>
                     <div class="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[4/3]">
                         <div class="absolute inset-0 bg-orange-200 dark:bg-slate-700 rounded-2xl transform translate-x-3 translate-y-3 z-0"></div>
-                        <img src="../brush-jjaemu.png" alt="Brush Jjaemu Game Screenshot - Cat Brush Game on itch.io" class="absolute inset-0 w-full h-full rounded-2xl border-4 border-white shadow-lg object-contain bg-white dark:bg-slate-800 hover:scale-[1.02] transition-transform duration-500 z-10">
+                        <img src="../brush-jjaemu.webp" alt="Brush Jjaemu Game Screenshot - Cat Brush Game on itch.io" class="absolute inset-0 w-full h-full rounded-2xl border-4 border-white shadow-lg object-contain bg-white dark:bg-slate-800 hover:scale-[1.02] transition-transform duration-500 z-10">
                     </div>
                 </div>
             </div>
@@ -483,7 +507,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[4/3] order-2 lg:order-1">
                     <div class="absolute inset-0 bg-orange-200 dark:bg-slate-700 rounded-2xl transform -translate-x-3 translate-y-3 z-0"></div>
-                    <img src="../brush-jjaemu.png" alt="Brush Jjaemu TikTok Trend and Reddit Gameplay" class="absolute inset-0 w-full h-full rounded-2xl border-4 border-white shadow-lg object-contain bg-white dark:bg-slate-800 hover:scale-[1.02] transition-transform duration-500 z-10">
+                    <img src="../brush-jjaemu.webp" alt="Brush Jjaemu TikTok Trend and Reddit Gameplay" class="absolute inset-0 w-full h-full rounded-2xl border-4 border-white shadow-lg object-contain bg-white dark:bg-slate-800 hover:scale-[1.02] transition-transform duration-500 z-10">
                 </div>
                 <div class="text-left space-y-6 order-1 lg:order-2">
                     <h2 class="text-3xl md:text-4xl font-black text-orange-950 dark:text-orange-50 tracking-wide" data-i18n="why_title">なぜ<span class="text-orange-500">Brush Jjaemu</span>はそんなに人気があるのですか？</h2>
@@ -695,7 +719,7 @@
                 <!-- Brand & Description -->
                 <div class="space-y-4">
                     <div class="flex items-center space-x-3 mb-4">
-                        <img src="../logo.png" alt="Brush Jjaemu Game Logo - Cat Game" class="h-8 w-8 rounded-lg shadow-md object-cover">
+                        <img src="../logo.webp" alt="Brush Jjaemu Game Logo - Cat Game" class="h-8 w-8 rounded-lg shadow-md object-cover">
                         <span class="text-xl font-black text-white tracking-wide">Brush Jjaemu</span>
                     </div>
                     <p class="text-orange-200/80 dark:text-slate-400 text-sm leading-relaxed" data-i18n="footer_desc">バイラルなBrush Jjaemu (artbyeori) 猫ゲームをオンラインでプレイ。ダウンロード不要で全画面、ブロック解除された体験を手に入れましょう。猫好きのための究極のリラックスブラウザゲーム。</p>
@@ -900,24 +924,22 @@
             });
         });
 
-        // Game loading simulation
-        function startGame() {
-            const loadingElement = document.getElementById('game-loading');
-            const iframe = document.getElementById('game-iframe');
-            
-            // Prevent multiple clicks
-            loadingElement.onclick = null;
-            loadingElement.style.cursor = 'default';
-            
-            // Focus iframe to enable keyboard/mouse controls immediately
-            iframe.focus();
-            
-            // Hide mask immediately (fade out)
-            loadingElement.style.opacity = '0';
+        // Game loading overlay removal on first interaction
+        window.addEventListener('blur', () => {
+            // Slight delay to allow document.activeElement to update
             setTimeout(() => {
-                loadingElement.style.display = 'none';
-            }, 300);
-        }
+                if (document.activeElement === document.getElementById('game-iframe')) {
+                    const loadingElement = document.getElementById('game-loading');
+                    if (loadingElement && loadingElement.style.display !== 'none') {
+                        // Fade out
+                        loadingElement.style.opacity = '0';
+                        setTimeout(() => {
+                            loadingElement.style.display = 'none';
+                        }, 500);
+                    }
+                }
+            }, 50);
+        });
 
         // Remove the automatic call
         // simulateGameLoading();

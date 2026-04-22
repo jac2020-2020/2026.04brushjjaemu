@@ -20,5 +20,10 @@
   "homepage": "https://github.com/jac2020-2020/2026.04brushjjaemu#readme",
   "dependencies": {
     "cheerio": "^1.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.10",
+    "tailwindcss": "^4.2.4"
   }
 }

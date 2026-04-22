@@ -1,9 +1,33 @@
 const fs = require('fs');
 const path = require('path');
 const cheerio = require('cheerio');
+const { execSync } = require('child_process');
+
+console.log('Compiling Tailwind CSS...');
+// Run Tailwind CLI to generate the minified CSS
+execSync('npx tailwindcss -i ./input.css -o ./output.css --minify', { stdio: 'inherit' });
+const compiledCss = fs.readFileSync('output.css', 'utf8');
 
 const i18n = JSON.parse(fs.readFileSync('i18n.json', 'utf8'));
 const baseHtml = fs.readFileSync('index.html', 'utf8');
+
+// Load base HTML into Cheerio
+const $base = cheerio.load(baseHtml);
+
+// 1. Remove Tailwind CDN script and configuration block
+$base('script[src="https://cdn.tailwindcss.com"]').remove();
+$base('script').filter(function() {
+    return $(this).html() && $(this).html().includes('tailwind.config');
+}).remove();
+
+// 2. Inject compiled CSS
+$base('head').append(`<style>${compiledCss}</style>`);
+
+// Clean up temporary output file
+fs.unlinkSync('output.css');
+
+// Convert modified base HTML back to string for language processing
+const modifiedBaseHtml = $base.html();
 
 const langs = ['en', 'vi', 'ar', 'zh', 'ja', 'ko', 'fr', 'lo'];
 
@@ -20,7 +44,7 @@ langs.forEach(lang => {
     }
 
     console.log(`Building for ${lang}...`);
-    const $ = cheerio.load(baseHtml);
+    const $ = cheerio.load(modifiedBaseHtml);
     const dict = i18n[lang];
 
     // 1. Update html lang and dir
@@ -71,8 +95,9 @@ langs.forEach(lang => {
     });
 
     // 4. Update asset paths for subdirectory
-    $('img[src="logo.png"]').attr('src', '../logo.png');
-    $('img[src="brush-jjaemu.png"]').attr('src', '../brush-jjaemu.png');
+    $('img[src="logo.webp"]').attr('src', '../logo.webp');
+    $('img[src="brush-jjaemu.webp"]').attr('src', '../brush-jjaemu.webp');
+    $('link[href="/logo.webp"]').attr('href', '../logo.webp');
 
     // 5. Save to subdirectory
     const dir = path.join(__dirname, lang);
