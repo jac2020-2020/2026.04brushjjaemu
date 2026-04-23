@@ -45,33 +45,11 @@
     <!-- Modern Gaming Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&amp;display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Nunito', 'sans-serif'],
-                    },
-                    colors: {
-                        'game-bg': '#FFF5E6',
-                        'game-card': 'rgba(255, 255, 255, 0.9)',
-                        'game-border': 'rgba(251, 146, 60, 0.2)',
-                        'cat-orange': '#f97316',
-                        'cat-light': '#fdba74',
-                        'cat-dark': '#c2410c',
-                        'cat-text': '#431407',
-                    },
-                    boxShadow: {
-                        'cat-glow': '0 0 15px rgba(249, 115, 22, 0.3)',
-                        'glass': '0 8px 32px 0 rgba(249, 115, 22, 0.1)',
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="preconnect" href="https://pub-4ca9553e3b5141e2b08c8798afcf2641.r2.dev" crossorigin="">
+    <!-- Asynchronous Google Fonts Loading -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&amp;display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap"></noscript>
+    <link href="/style.css" rel="stylesheet">
     <style>
         body {
             background-color: #FFF5E6;
@@ -239,7 +217,8 @@
             stroke-width: 2;
         }
     </style>
-</head>
+<style>/*! tailwindcss v4.2.4 | MIT License | https://tailwindcss.com */
+@layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,:before,:after,::backdrop{--tw-translate-x:0;--tw-translate-y:0;--tw-translate-z:0;--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial;--tw-border-style:solid;--tw-shadow:0 0 #0000;--tw-shadow-color:initial;--tw-shadow-alpha:100%;--tw-inset-shadow:0 0 #0000;--tw-inset-shadow-color:initial;--tw-inset-shadow-alpha:100%;--tw-ring-color:initial;--tw-ring-shadow:0 0 #0000;--tw-inset-ring-color:initial;--tw-inset-ring-shadow:0 0 #0000;--tw-ring-inset:initial;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-offset-shadow:0 0 #0000;--tw-blur:initial;--tw-brightness:initial;--tw-contrast:initial;--tw-grayscale:initial;--tw-hue-rotate:initial;--tw-invert:initial;--tw-opacity:initial;--tw-saturate:initial;--tw-sepia:initial;--tw-drop-shadow:initial;--tw-drop-shadow-color:initial;--tw-drop-shadow-alpha:100%;--tw-drop-shadow-size:initial;--tw-backdrop-blur:initial;--tw-backdrop-brightness:initial;--tw-backdrop-contrast:initial;--tw-backdrop-grayscale:initial;--tw-backdrop-hue-rotate:initial;--tw-backdrop-invert:initial;--tw-backdrop-opacity:initial;--tw-backdrop-saturate:initial;--tw-backdrop-sepia:initial;--tw-duration:initial;--tw-scale-x:1;--tw-scale-y:1;--tw-scale-z:1}}}.pointer-events-none{pointer-events:none}.invisible{visibility:hidden}.visible{visibility:visible}.absolute{position:absolute}.fixed{position:fixed}.relative{position:relative}.static{position:static}.bottom-full{bottom:100%}.left-1\/2{left:50%}.z-0{z-index:0}.z-10{z-index:10}.z-20{z-index:20}.z-30{z-index:30}.z-50{z-index:50}.order-1{order:1}.order-2{order:2}.container{width:100%}.mx-auto{margin-inline:auto}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.inline{display:inline}.inline-block{display:inline-block}.inline-flex{display:inline-flex}.table{display:table}.aspect-\[4\/3\]{aspect-ratio:4/3}.aspect-\[9\/16\]{aspect-ratio:9/16}.h-\[300px\]{height:300px}.h-\[400px\]{height:400px}.h-\[600px\]{height:600px}.h-full{height:100%}.w-\[600px\]{width:600px}.w-\[800px\]{width:800px}.w-full{width:100%}.max-w-\[90rem\]{max-width:90rem}.flex-1{flex:1}.flex-shrink-0,.shrink-0{flex-shrink:0}.origin-top-right{transform-origin:100% 0}.-translate-x-1\/2{--tw-translate-x:calc(calc(1 / 2 * 100%) * -1);translate:var(--tw-translate-x) var(--tw-translate-y)}.rotate-180{rotate:180deg}.transform{transform:var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,)}.cursor-not-allowed{cursor:not-allowed}.cursor-pointer{cursor:pointer}.resize{resize:both}.resize-none{resize:none}.list-none{list-style-type:none}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}.flex-col{flex-direction:column}.items-center{align-items:center}.items-start{align-items:flex-start}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.rounded-full{border-radius:3.40282e38px}.border{border-style:var(--tw-border-style);border-width:1px}.border-0{border-style:var(--tw-border-style);border-width:0}.border-2{border-style:var(--tw-border-style);border-width:2px}.border-4{border-style:var(--tw-border-style);border-width:4px}.border-t{border-top-style:var(--tw-border-style);border-top-width:1px}.border-b{border-bottom-style:var(--tw-border-style);border-bottom-width:1px}.border-dashed{--tw-border-style:dashed;border-style:dashed}.bg-\[\#1DA1F2\]\/10{background-color:oklab(68.1797% -.0710533 -.141606/.1)}.bg-\[\#1877F2\]\/10{background-color:oklab(58.9125% -.0426609 -.198334/.1)}.bg-\[\#FF4500\]\/10{background-color:oklab(66.02% .186949 .13287/.1)}.bg-gradient-to-r{--tw-gradient-position:to right in oklab;background-image:linear-gradient(var(--tw-gradient-stops))}.bg-\[url\(\'data\:image\/svg\+xml\;base64\,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI\+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6bTIwIDIwYzAtMTEuMDQ2IDguOTU0LTIwIDIwLTIwczIwIDguOTU0IDIwIDIwTDAlMjB6IiBmaWxsPSIjZmI5MjNjIiBmaWxsLW9wYWNpdHk9Ii4wNSIgZmlsbC1ydWxlPSJldmVub2RkIi8\+PC9zdmc\+\'\)\]{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6bTIwIDIwYzAtMTEuMDQ2IDguOTU0LTIwIDIwLTIwczIwIDguOTU0IDIwIDIwTDAlMjB6IiBmaWxsPSIjZmI5MjNjIiBmaWxsLW9wYWNpdHk9Ii4wNSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+)}.bg-\[url\(\'data\:image\/svg\+xml\;base64\,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI\+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6bTIwIDIwYzAtMTEuMDQ2IDguOTU0LTIwIDIwLTIwczIwIDguOTU0IDIwIDIwTDAlMjB6IiBmaWxsPSIjZmI5MjNjIiBmaWxsLW9wYWNpdHk9Ii40IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4\=\'\)\]{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgwVjB6bTIwIDIwYzAtMTEuMDQ2IDguOTU0LTIwIDIwLTIwczIwIDguOTU0IDIwIDIwTDAlMjB6IiBmaWxsPSIjZmI5MjNjIiBmaWxsLW9wYWNpdHk9Ii40IiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=)}.object-contain{object-fit:contain}.object-cover{object-fit:cover}.text-center{text-align:center}.text-left{text-align:left}.text-\[10px\]{font-size:10px}.text-\[\#1DA1F2\]{color:#1da1f2}.text-\[\#1877F2\]{color:#1877f2}.text-\[\#FF4500\]{color:#ff4500}.uppercase{text-transform:uppercase}.opacity-0{opacity:0}.opacity-10{opacity:.1}.opacity-20{opacity:.2}.opacity-50{opacity:.5}.opacity-70{opacity:.7}.opacity-75{opacity:.75}.opacity-80{opacity:.8}.opacity-100{opacity:1}.shadow-\[0_0_10px_rgba\(249\,115\,22\,0\.3\)\]{--tw-shadow:0 0 10px var(--tw-shadow-color,#f973164d);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-\[0_0_15px_rgba\(220\,38\,38\,0\.5\)\]{--tw-shadow:0 0 15px var(--tw-shadow-color,#dc262680);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.shadow-\[0_0_15px_rgba\(249\,115\,22\,0\.4\)\]{--tw-shadow:0 0 15px var(--tw-shadow-color,#f9731666);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.blur-\[100px\]{--tw-blur:blur(100px);filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.blur-\[120px\]{--tw-blur:blur(120px);filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.filter{filter:var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,)}.backdrop-filter{-webkit-backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);backdrop-filter:var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,)}.transition{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to,opacity,box-shadow,transform,translate,scale,rotate,filter,-webkit-backdrop-filter,backdrop-filter,display,content-visibility,overlay,pointer-events;transition-timing-function:var(--tw-ease,ease);transition-duration:var(--tw-duration,0s)}.transition-all{transition-property:all;transition-timing-function:var(--tw-ease,ease);transition-duration:var(--tw-duration,0s)}.transition-colors{transition-property:color,background-color,border-color,outline-color,text-decoration-color,fill,stroke,--tw-gradient-from,--tw-gradient-via,--tw-gradient-to;transition-timing-function:var(--tw-ease,ease);transition-duration:var(--tw-duration,0s)}.transition-opacity{transition-property:opacity;transition-timing-function:var(--tw-ease,ease);transition-duration:var(--tw-duration,0s)}.transition-transform{transition-property:transform,translate,scale,rotate;transition-timing-function:var(--tw-ease,ease);transition-duration:var(--tw-duration,0s)}.duration-300{--tw-duration:.3s;transition-duration:.3s}.duration-500{--tw-duration:.5s;transition-duration:.5s}.outline-none{--tw-outline-style:none;outline-style:none}.group-open\:visible:is(:where(.group):is([open],:popover-open,:open) *){visibility:visible}.group-open\:opacity-100:is(:where(.group):is([open],:popover-open,:open) *){opacity:1}@media (hover:hover){.group-hover\:scale-105:is(:where(.group):hover *){--tw-scale-x:105%;--tw-scale-y:105%;--tw-scale-z:105%;scale:var(--tw-scale-x) var(--tw-scale-y)}.group-hover\:scale-110:is(:where(.group):hover *){--tw-scale-x:110%;--tw-scale-y:110%;--tw-scale-z:110%;scale:var(--tw-scale-x) var(--tw-scale-y)}.group-hover\:opacity-100:is(:where(.group):hover *){opacity:1}.hover\:scale-\[1\.02\]:hover{scale:1.02}.hover\:bg-\[\#1DA1F2\]:hover{background-color:#1da1f2}.hover\:bg-\[\#1877F2\]:hover{background-color:#1877f2}.hover\:bg-\[\#FF4500\]:hover{background-color:#ff4500}}.focus\:ring-1:focus{--tw-ring-shadow:var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color,currentcolor);box-shadow:var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}.focus\:outline-none:focus{--tw-outline-style:none;outline-style:none}.ltr\:border-l-4:where(:dir(ltr),[dir=ltr],[dir=ltr] *){border-left-style:var(--tw-border-style);border-left-width:4px}.rtl\:rotate-180:where(:dir(rtl),[dir=rtl],[dir=rtl] *){rotate:180deg}.rtl\:border-r-4:where(:dir(rtl),[dir=rtl],[dir=rtl] *){border-right-style:var(--tw-border-style);border-right-width:4px}.rtl\:text-right:where(:dir(rtl),[dir=rtl],[dir=rtl] *){text-align:right}@property --tw-translate-x{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-y{syntax:"*";inherits:false;initial-value:0}@property --tw-translate-z{syntax:"*";inherits:false;initial-value:0}@property --tw-rotate-x{syntax:"*";inherits:false}@property --tw-rotate-y{syntax:"*";inherits:false}@property --tw-rotate-z{syntax:"*";inherits:false}@property --tw-skew-x{syntax:"*";inherits:false}@property --tw-skew-y{syntax:"*";inherits:false}@property --tw-border-style{syntax:"*";inherits:false;initial-value:solid}@property --tw-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-shadow-color{syntax:"*";inherits:false}@property --tw-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-inset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-shadow-color{syntax:"*";inherits:false}@property --tw-inset-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-ring-color{syntax:"*";inherits:false}@property --tw-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-inset-ring-color{syntax:"*";inherits:false}@property --tw-inset-ring-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-ring-inset{syntax:"*";inherits:false}@property --tw-ring-offset-width{syntax:"<length>";inherits:false;initial-value:0}@property --tw-ring-offset-color{syntax:"*";inherits:false;initial-value:#fff}@property --tw-ring-offset-shadow{syntax:"*";inherits:false;initial-value:0 0 #0000}@property --tw-blur{syntax:"*";inherits:false}@property --tw-brightness{syntax:"*";inherits:false}@property --tw-contrast{syntax:"*";inherits:false}@property --tw-grayscale{syntax:"*";inherits:false}@property --tw-hue-rotate{syntax:"*";inherits:false}@property --tw-invert{syntax:"*";inherits:false}@property --tw-opacity{syntax:"*";inherits:false}@property --tw-saturate{syntax:"*";inherits:false}@property --tw-sepia{syntax:"*";inherits:false}@property --tw-drop-shadow{syntax:"*";inherits:false}@property --tw-drop-shadow-color{syntax:"*";inherits:false}@property --tw-drop-shadow-alpha{syntax:"<percentage>";inherits:false;initial-value:100%}@property --tw-drop-shadow-size{syntax:"*";inherits:false}@property --tw-backdrop-blur{syntax:"*";inherits:false}@property --tw-backdrop-brightness{syntax:"*";inherits:false}@property --tw-backdrop-contrast{syntax:"*";inherits:false}@property --tw-backdrop-grayscale{syntax:"*";inherits:false}@property --tw-backdrop-hue-rotate{syntax:"*";inherits:false}@property --tw-backdrop-invert{syntax:"*";inherits:false}@property --tw-backdrop-opacity{syntax:"*";inherits:false}@property --tw-backdrop-saturate{syntax:"*";inherits:false}@property --tw-backdrop-sepia{syntax:"*";inherits:false}@property --tw-duration{syntax:"*";inherits:false}@property --tw-scale-x{syntax:"*";inherits:false;initial-value:1}@property --tw-scale-y{syntax:"*";inherits:false;initial-value:1}@property --tw-scale-z{syntax:"*";inherits:false;initial-value:1}</style></head>
 <body class="bg-game-bg dark:bg-slate-900 text-orange-900 dark:text-orange-100 font-sans leading-relaxed">
     <!-- Navbar -->
     <nav class="fixed top-0 w-full z-50 bg-orange-50/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-orange-200 dark:border-slate-700 transition-colors duration-300" id="navbar">
@@ -247,16 +226,16 @@
             <div class="flex items-center justify-between h-16">
                 <!-- Logo and Name -->
                 <div class="flex items-center space-x-3">
-                    <img src="../logo.webp" alt="Brush Jjaemu Game Logo - Play Cat Brush Game" class="h-10 w-10 rounded-lg shadow-[0_0_10px_rgba(249,115,22,0.3)] object-cover">
+                    <img src="../logo.webp" alt="Brush Jjaemu Game Logo - Play Cat Brush Game" width="40" height="40" class="h-10 w-10 rounded-lg shadow-[0_0_10px_rgba(249,115,22,0.3)] object-cover">
                     <span class="text-xl font-extrabold text-orange-950 dark:text-orange-50 tracking-wide">Brush Jjaemu</span>
                 </div>
                 
                 <!-- Navigation Links & Actions -->
                 <div class="flex items-center space-x-4 md:space-x-6">
                     <div class="hidden md:flex items-center space-x-6">
-                        <a href="#about" data-i18n="nav_about" class="text-sm font-bold text-orange-800 dark:text-orange-200 hover:text-orange-600 transition-colors">概要</a>
-                        <a href="#how-to-play" data-i18n="nav_how_to_play" class="text-sm font-bold text-orange-800 dark:text-orange-200 hover:text-orange-600 transition-colors">遊び方</a>
-                        <a href="#faq" data-i18n="nav_faq" class="text-sm font-bold text-orange-800 dark:text-orange-200 hover:text-orange-600 transition-colors">よくある質問</a>
+                        <a href="#about" data-i18n="nav_about" class="text-sm font-bold text-orange-800 dark:text-orange-200 hover:text-orange-600 transition-colors" title="Learn more about Brush Jjaemu game">概要</a>
+                        <a href="#how-to-play" data-i18n="nav_how_to_play" class="text-sm font-bold text-orange-800 dark:text-orange-200 hover:text-orange-600 transition-colors" title="Guide on how to play the cat brushing game">遊び方</a>
+                        <a href="#faq" data-i18n="nav_faq" class="text-sm font-bold text-orange-800 dark:text-orange-200 hover:text-orange-600 transition-colors" title="Frequently asked questions">よくある質問</a>
                     </div>
                     
                     <div class="flex items-center space-x-3 md:border-l md:border-orange-200 dark:border-slate-700 md:pl-6">
@@ -267,14 +246,14 @@
                             </button>
                             <!-- Language Dropdown -->
                             <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-44 bg-white/95 dark:bg-slate-800/95 backdrop-blur-md border border-orange-200 dark:border-slate-700 rounded-xl shadow-2xl py-2 z-50 transform origin-top-right transition-all">
-                                <a href="/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">English</a>
-                                <a href="/vi/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">Tiếng Việt</a>
-                                <a href="/ar/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" dir="rtl">العربية</a>
-                                <a href="/zh/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">简体中文</a>
-                                <a href="/ja/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">日本語</a>
-                                <a href="/ko/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">한국어</a>
-                                <a href="/fr/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">Français</a>
-                                <a href="/lo/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">ລາວ</a>
+                                <a href="/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" title="Switch to English">English</a>
+                                <a href="/vi/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" title="Chuyển sang Tiếng Việt">Tiếng Việt</a>
+                                <a href="/ar/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" dir="rtl" title="التبديل إلى العربية">العربية</a>
+                                <a href="/zh/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" title="切换到简体中文">简体中文</a>
+                                <a href="/ja/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" title="日本語に切り替える">日本語</a>
+                                <a href="/ko/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" title="한국어로 전환">한국어</a>
+                                <a href="/fr/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" title="Passer au Français">Français</a>
+                                <a href="/lo/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" title="ສະຫຼັບເປັນພາສາລາວ">ລາວ</a>
                             </div>
                         </div>
                         
@@ -328,7 +307,7 @@
                             <!-- Game Loading Overlay / Start Mask (pointer-events-none allows clicks to pass through) -->
                             <div id="game-loading" class="absolute inset-0 flex flex-col items-center justify-center bg-black rounded-2xl z-20 transition-opacity duration-500 pointer-events-none">
                                 <div class="text-center pointer-events-none">
-                                    <img src="../logo.webp" alt="Brush Jjaemu Unblocked Game - Cat Grooming ASMR" class="w-24 h-24 mx-auto mb-4 rounded-2xl shadow-lg animate-pulse">
+                                    <img src="../logo.webp" alt="Brush Jjaemu Unblocked Game - Cat Grooming ASMR" width="96" height="96" class="w-24 h-24 mx-auto mb-4 rounded-2xl shadow-lg animate-pulse">
                                     <div class="inline-flex items-center justify-center px-6 py-3 bg-orange-500 text-white font-black rounded-full shadow-[0_0_15px_rgba(249,115,22,0.4)]">
                                         <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M4 4l12 6-12 6z"></path></svg>
                                         Click to Play
@@ -446,7 +425,7 @@
                     </div>
                     <div class="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[4/3]">
                         <div class="absolute inset-0 bg-orange-200 dark:bg-slate-700 rounded-2xl transform translate-x-3 translate-y-3 z-0"></div>
-                        <img src="../brush-jjaemu.webp" alt="Brush Jjaemu Game Screenshot - Cat Brush Game on itch.io" class="absolute inset-0 w-full h-full rounded-2xl border-4 border-white shadow-lg object-contain bg-white dark:bg-slate-800 hover:scale-[1.02] transition-transform duration-500 z-10">
+                        <img src="../brush-jjaemu.webp" alt="Brush Jjaemu Game Screenshot - Cat Brush Game on itch.io" width="300" height="300" class="absolute inset-0 w-full h-full rounded-2xl border-4 border-white shadow-lg object-contain bg-white dark:bg-slate-800 hover:scale-[1.02] transition-transform duration-500 z-10">
                     </div>
                 </div>
             </div>
@@ -507,7 +486,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div class="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[4/3] order-2 lg:order-1">
                     <div class="absolute inset-0 bg-orange-200 dark:bg-slate-700 rounded-2xl transform -translate-x-3 translate-y-3 z-0"></div>
-                    <img src="../brush-jjaemu.webp" alt="Brush Jjaemu TikTok Trend and Reddit Gameplay" class="absolute inset-0 w-full h-full rounded-2xl border-4 border-white shadow-lg object-contain bg-white dark:bg-slate-800 hover:scale-[1.02] transition-transform duration-500 z-10">
+                    <img src="../brush-jjaemu.webp" alt="Brush Jjaemu TikTok Trend and Reddit Gameplay" width="300" height="300" class="absolute inset-0 w-full h-full rounded-2xl border-4 border-white shadow-lg object-contain bg-white dark:bg-slate-800 hover:scale-[1.02] transition-transform duration-500 z-10">
                 </div>
                 <div class="text-left space-y-6 order-1 lg:order-2">
                     <h2 class="text-3xl md:text-4xl font-black text-orange-950 dark:text-orange-50 tracking-wide" data-i18n="why_title">なぜ<span class="text-orange-500">Brush Jjaemu</span>はそんなに人気があるのですか？</h2>
@@ -522,7 +501,7 @@
             <h2 class="text-2xl md:text-3xl font-black text-orange-950 dark:text-orange-50 mb-10 tracking-wide text-center" data-i18n="watch_title"><span class="text-orange-500">Brush Jjaemu</span>のゲームプレイを見る</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
                 <div class="relative overflow-hidden rounded-2xl aspect-[9/16] bg-orange-100 dark:bg-slate-700 border border-orange-200 dark:border-slate-700 shadow-xl cursor-pointer group" onclick="this.innerHTML='<iframe class=\'absolute inset-0 w-full h-full\' src=\'https://www.youtube-nocookie.com/embed/-5UXOUFa-hI?autoplay=1\' title=\'Brush Jjaemu Gameplay Video 1\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\' allowfullscreen></iframe>'">
-                    <img src="https://i.ytimg.com/vi/-5UXOUFa-hI/hqdefault.jpg" alt="Brush Jjaemu Game Playthrough Shorts - Cat Brush Game ASMR" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                    <img src="https://i.ytimg.com/vi/-5UXOUFa-hI/hqdefault.jpg" alt="Brush Jjaemu Game Playthrough Shorts - Cat Brush Game ASMR" width="480" height="360" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
                     <div class="absolute inset-0 flex items-center justify-center">
                         <div class="w-14 h-14 bg-red-600/90 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(220,38,38,0.5)] group-hover:bg-red-600 transition-colors transform group-hover:scale-110 duration-300">
                             <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
@@ -530,7 +509,7 @@
                     </div>
                 </div>
                 <div class="relative overflow-hidden rounded-2xl aspect-[9/16] bg-orange-100 dark:bg-slate-700 border border-orange-200 dark:border-slate-700 shadow-xl cursor-pointer group" onclick="this.innerHTML='<iframe class=\'absolute inset-0 w-full h-full\' src=\'https://www.youtube-nocookie.com/embed/EL6N8YclSLQ?autoplay=1\' title=\'Brush Jjaemu Gameplay Video 2\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\' allowfullscreen></iframe>'">
-                    <img src="https://i.ytimg.com/vi/EL6N8YclSLQ/hqdefault.jpg" alt="How to play Brush Jjaemu game unblocked online" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                    <img src="https://i.ytimg.com/vi/EL6N8YclSLQ/hqdefault.jpg" alt="How to play Brush Jjaemu game unblocked online" width="480" height="360" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
                     <div class="absolute inset-0 flex items-center justify-center">
                         <div class="w-14 h-14 bg-red-600/90 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(220,38,38,0.5)] group-hover:bg-red-600 transition-colors transform group-hover:scale-110 duration-300">
                             <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
@@ -538,7 +517,7 @@
                     </div>
                 </div>
                 <div class="relative overflow-hidden rounded-2xl aspect-[9/16] bg-orange-100 dark:bg-slate-700 border border-orange-200 dark:border-slate-700 shadow-xl cursor-pointer group" onclick="this.innerHTML='<iframe class=\'absolute inset-0 w-full h-full\' src=\'https://www.youtube-nocookie.com/embed/HyeL7Cs1CRI?autoplay=1\' title=\'Brush Jjaemu Gameplay Video 3\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\' allowfullscreen></iframe>'">
-                    <img src="https://i.ytimg.com/vi/HyeL7Cs1CRI/hqdefault.jpg" alt="Relaxing Cat Grooming Game ASMR - Brush Jjaemu Itch io" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                    <img src="https://i.ytimg.com/vi/HyeL7Cs1CRI/hqdefault.jpg" alt="Relaxing Cat Grooming Game ASMR - Brush Jjaemu Itch io" width="480" height="360" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
                     <div class="absolute inset-0 flex items-center justify-center">
                         <div class="w-14 h-14 bg-red-600/90 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(220,38,38,0.5)] group-hover:bg-red-600 transition-colors transform group-hover:scale-110 duration-300">
                             <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
@@ -546,7 +525,7 @@
                     </div>
                 </div>
                 <div class="relative overflow-hidden rounded-2xl aspect-[9/16] bg-orange-100 dark:bg-slate-700 border border-orange-200 dark:border-slate-700 shadow-xl cursor-pointer group" onclick="this.innerHTML='<iframe class=\'absolute inset-0 w-full h-full\' src=\'https://www.youtube-nocookie.com/embed/bTO9ZqDvHw0?autoplay=1\' title=\'Brush Jjaemu Gameplay Video 4\' frameborder=\'0\' allow=\'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\' allowfullscreen></iframe>'">
-                    <img src="https://i.ytimg.com/vi/bTO9ZqDvHw0/hqdefault.jpg" alt="Funny YOU DIED Moment in Brush Jjaemu Game" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                    <img src="https://i.ytimg.com/vi/bTO9ZqDvHw0/hqdefault.jpg" alt="Funny YOU DIED Moment in Brush Jjaemu Game" width="480" height="360" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
                     <div class="absolute inset-0 flex items-center justify-center">
                         <div class="w-14 h-14 bg-red-600/90 rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(220,38,38,0.5)] group-hover:bg-red-600 transition-colors transform group-hover:scale-110 duration-300">
                             <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
@@ -709,6 +688,13 @@
                 </div>
             </div>
         </section>
+
+        <!-- SEO & Alternative Spellings -->
+        <section class="mt-16 mb-8 max-w-4xl mx-auto px-4 fade-in-up">
+            <div class="text-xs text-orange-900/40 dark:text-slate-400/40 text-center leading-relaxed">
+                <p>Looking for the viral cat grooming game? Whether you spell it <strong>Brush Jaemu</strong>, <strong>Jiaemu</strong>, <strong>Jamu</strong>, or even <strong>Jjeamu</strong>, you've found the right place! Experience the original <strong>Brush Jjaemu cat filter</strong> game online for free.</p>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -719,7 +705,7 @@
                 <!-- Brand & Description -->
                 <div class="space-y-4">
                     <div class="flex items-center space-x-3 mb-4">
-                        <img src="../logo.webp" alt="Brush Jjaemu Game Logo - Cat Game" class="h-8 w-8 rounded-lg shadow-md object-cover">
+                        <img src="../logo.webp" alt="Brush Jjaemu Game Logo - Cat Game" width="32" height="32" class="h-8 w-8 rounded-lg shadow-md object-cover">
                         <span class="text-xl font-black text-white tracking-wide">Brush Jjaemu</span>
                     </div>
                     <p class="text-orange-200/80 dark:text-slate-400 text-sm leading-relaxed" data-i18n="footer_desc">バイラルなBrush Jjaemu (artbyeori) 猫ゲームをオンラインでプレイ。ダウンロード不要で全画面、ブロック解除された体験を手に入れましょう。猫好きのための究極のリラックスブラウザゲーム。</p>
@@ -729,9 +715,9 @@
                 <div>
                     <h4 class="text-white font-black uppercase tracking-widest text-sm mb-6" data-i18n="footer_links_title">クイックリンク</h4>
                     <ul class="space-y-3 text-sm text-orange-200/80 dark:text-slate-400 font-medium">
-                        <li><a href="#about" class="hover:text-orange-400 dark:hover:text-orange-500 transition-colors" data-i18n="nav_about">概要</a></li>
-                        <li><a href="#how-to-play" class="hover:text-orange-400 dark:hover:text-orange-500 transition-colors" data-i18n="nav_how_to_play">遊び方</a></li>
-                        <li><a href="#faq" class="hover:text-orange-400 dark:hover:text-orange-500 transition-colors" data-i18n="nav_faq">よくある質問</a></li>
+                        <li><a href="#about" class="hover:text-orange-400 dark:hover:text-orange-500 transition-colors" data-i18n="nav_about" title="Learn what Brush Jjaemu is about">概要</a></li>
+                        <li><a href="#how-to-play" class="hover:text-orange-400 dark:hover:text-orange-500 transition-colors" data-i18n="nav_how_to_play" title="Read the how to play guide">遊び方</a></li>
+                        <li><a href="#faq" class="hover:text-orange-400 dark:hover:text-orange-500 transition-colors" data-i18n="nav_faq" title="Read frequently asked questions">よくある質問</a></li>
                     </ul>
                 </div>
 
