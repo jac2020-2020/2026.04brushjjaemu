@@ -17,7 +17,7 @@ const $base = cheerio.load(baseHtml);
 // 1. Remove Tailwind CDN script and configuration block
 $base('script[src="https://cdn.tailwindcss.com"]').remove();
 $base('script').filter(function() {
-    return $(this).html() && $(this).html().includes('tailwind.config');
+    return $base(this).html() && $base(this).html().includes('tailwind.config');
 }).remove();
 
 // 2. Inject compiled CSS

@@ -48,7 +48,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://pub-4ca9553e3b5141e2b08c8798afcf2641.r2.dev" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <!-- Asynchronous Google Fonts Loading -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&display=swap"></noscript>
     <link href="/style.css" rel="stylesheet">
     <style>
         body {
@@ -232,9 +234,9 @@
                 <!-- Navigation Links & Actions -->
                 <div class="flex items-center space-x-4 md:space-x-6">
                     <div class="hidden md:flex items-center space-x-6">
-                        <a href="#about" data-i18n="nav_about" class="text-sm font-bold text-orange-800 dark:text-orange-200 hover:text-orange-600 transition-colors">About</a>
-                        <a href="#how-to-play" data-i18n="nav_how_to_play" class="text-sm font-bold text-orange-800 dark:text-orange-200 hover:text-orange-600 transition-colors">How to Play</a>
-                        <a href="#faq" data-i18n="nav_faq" class="text-sm font-bold text-orange-800 dark:text-orange-200 hover:text-orange-600 transition-colors">FAQ</a>
+                        <a href="#about" data-i18n="nav_about" class="text-sm font-bold text-orange-800 dark:text-orange-200 hover:text-orange-600 transition-colors" title="Learn more about Brush Jjaemu game">About</a>
+                        <a href="#how-to-play" data-i18n="nav_how_to_play" class="text-sm font-bold text-orange-800 dark:text-orange-200 hover:text-orange-600 transition-colors" title="Guide on how to play the cat brushing game">How to Play</a>
+                        <a href="#faq" data-i18n="nav_faq" class="text-sm font-bold text-orange-800 dark:text-orange-200 hover:text-orange-600 transition-colors" title="Frequently asked questions">FAQ</a>
                     </div>
                     
                     <div class="flex items-center space-x-3 md:border-l md:border-orange-200 dark:border-slate-700 md:pl-6">
@@ -245,14 +247,14 @@
                             </button>
                             <!-- Language Dropdown -->
                             <div id="lang-dropdown" class="hidden absolute right-0 mt-2 w-44 bg-white/95 dark:bg-slate-800/95 backdrop-blur-md border border-orange-200 dark:border-slate-700 rounded-xl shadow-2xl py-2 z-50 transform origin-top-right transition-all">
-                                <a href="/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">English</a>
-                                <a href="/vi/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">Tiếng Việt</a>
-                                <a href="/ar/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" dir="rtl">العربية</a>
-                                <a href="/zh/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">简体中文</a>
-                                <a href="/ja/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">日本語</a>
-                                <a href="/ko/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">한국어</a>
-                                <a href="/fr/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">Français</a>
-                                <a href="/lo/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors">ລາວ</a>
+                                <a href="/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" title="Switch to English">English</a>
+                                <a href="/vi/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" title="Chuyển sang Tiếng Việt">Tiếng Việt</a>
+                                <a href="/ar/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" dir="rtl" title="التبديل إلى العربية">العربية</a>
+                                <a href="/zh/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" title="切换到简体中文">简体中文</a>
+                                <a href="/ja/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" title="日本語に切り替える">日本語</a>
+                                <a href="/ko/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" title="한국어로 전환">한국어</a>
+                                <a href="/fr/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" title="Passer au Français">Français</a>
+                                <a href="/lo/" class="block px-4 py-2 text-sm text-left text-orange-900 dark:text-orange-100 hover:bg-orange-100 dark:hover:bg-slate-700 hover:text-orange-600 dark:hover:text-orange-400 font-bold transition-colors" title="ສະຫຼັບເປັນພາສາລາວ">ລາວ</a>
                             </div>
                         </div>
                         
@@ -726,6 +728,13 @@
                 </div>
             </div>
         </section>
+
+        <!-- SEO & Alternative Spellings -->
+        <section class="mt-16 mb-8 max-w-4xl mx-auto px-4 fade-in-up">
+            <div class="text-xs text-orange-900/40 dark:text-slate-400/40 text-center leading-relaxed">
+                <p>Looking for the viral cat grooming game? Whether you spell it <strong>Brush Jaemu</strong>, <strong>Jiaemu</strong>, <strong>Jamu</strong>, or even <strong>Jjeamu</strong>, you've found the right place! Experience the original <strong>Brush Jjaemu cat filter</strong> game online for free.</p>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -748,9 +757,9 @@
                 <div>
                     <h4 class="text-white font-black uppercase tracking-widest text-sm mb-6" data-i18n="footer_links_title">Quick Links</h4>
                     <ul class="space-y-3 text-sm text-orange-200/80 dark:text-slate-400 font-medium">
-                        <li><a href="#about" class="hover:text-orange-400 dark:hover:text-orange-500 transition-colors" data-i18n="nav_about">What is Brush Jjaemu</a></li>
-                        <li><a href="#how-to-play" class="hover:text-orange-400 dark:hover:text-orange-500 transition-colors" data-i18n="nav_how_to_play">How to Play Guide</a></li>
-                        <li><a href="#faq" class="hover:text-orange-400 dark:hover:text-orange-500 transition-colors" data-i18n="nav_faq">Frequently Asked Questions</a></li>
+                        <li><a href="#about" class="hover:text-orange-400 dark:hover:text-orange-500 transition-colors" data-i18n="nav_about" title="Learn what Brush Jjaemu is about">What is Brush Jjaemu</a></li>
+                        <li><a href="#how-to-play" class="hover:text-orange-400 dark:hover:text-orange-500 transition-colors" data-i18n="nav_how_to_play" title="Read the how to play guide">How to Play Guide</a></li>
+                        <li><a href="#faq" class="hover:text-orange-400 dark:hover:text-orange-500 transition-colors" data-i18n="nav_faq" title="Read frequently asked questions">Frequently Asked Questions</a></li>
                     </ul>
                 </div>
 
